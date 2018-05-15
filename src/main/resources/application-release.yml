@@ -1,0 +1,64 @@
+spring:
+  jackson:
+   date-format: yyyy-MM-dd HH:mm:ss
+   time-zone: GMT+8
+   default-property-inclusion: non_null
+  datasource:
+    url: jdbc:mysql://39.108.239.239:3306/lmcat?characterEncoding=UTF-8
+    username: ..
+    password: ..
+    type: org.nutz.dao.impl.SimpleDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:      #druid配置
+      filters: stat,wall
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+  http:
+    multipart:
+      max-file-size: 30Mb
+      max-request-size: 100Mb
+logging:
+  level:
+    root: info
+    org.nutz: debug
+    com.lmcat: debug
+management:
+  security:
+    enabled: false
+nutz:
+  json:
+    enabled: false
+    mode: compact
+    date-format: yyyyMMdd HH:mm:ss
+  dao:
+    runtime:
+      add-column: true
+      check-index: true
+      delete-column: true
+      foce-create: false
+      create: true
+      migration: true
+      basepackage: "com.lmcat"
+    sqlmanager:
+      paths:
+      - sqls
+beetlsql:
+    enabled : false #禁用beetlsql
+server:
+  port: 8021
+  context-path: /
+  compression:
+    min-response-size: 512 #压缩文件最小大小(kb)
+    enabled: true #是否压缩
+    mime-types: text/html,text/css,text/javascript,application/javascript,image/gif,image/png,image/jpg,image/jpeg #要压缩的文件格式

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="${ctxPath}/plugin/layui/css/layui.css" media="all"/>
+    <style type="text/css">
+    	.layui-form-item .layui-input{
+    		width: 400px;
+    		display: inline-block;
+    	}
+    	.layui-textarea,.layui-select,.select{
+    		width: 400px;
+    	}
+    	.notcie{
+    		margin-bottom: 10px;
+    	}
+    	#upLoadImg,#samp{
+    		background-color: grey;
+    	}
+    	.red{
+    		color: red;
+    	}
+    	.upLoadImgName,.upLoadRarName{
+    		margin: 0 10px;
+    	}
+    	.showimg{
+    		max-width: 376px;
+    		max-height: 246px;
+    		position: absolute;
+    		margin-left: 50px;
+    	}
+    	
+    	.layui-select-disabled .layui-disabled{
+    		border: none;
+    		color: black!important;
+    	}
+    	.layui-disabled,.layui-disabled:hover{
+    		color: black!important;
+    	}
+    	.layui-radio-disbaled>i{
+    		color: #5FB878!important;
+    	}
+    </style>
+</head>
+<body class="childrenBody">
+<br><br>
+<form class="layui-form">
+    <input type="hidden" class="layui-input id" name="id" lay-verify="id">
+    <div class="layui-form-item">
+        <div class="layui-input-block" style="position: relative;">
+        	<div class="notcie"><b>数据名称</b></div>
+            <input type="text" class="layui-input title" name="title" lay-verify="required">
+            <img class="showimg" src=""/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+        	<div class="notcie"><b>数据描述</b></div>
+			<textarea name="describtion" class="layui-textarea describtion" lay-verify="required"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+        	<div class="notcie"><b>数据类别</b></div>
+        	<input type="text" class="layui-input dataCategory" name="dataCategory">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+        	<div class="notcie"><b>价格</b></div>
+            <input type="text" class="layui-input price_input price" name="price">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+        	<div class="notcie"><b>完成时间</b></div>
+            <input type="text" class="layui-input completeAt" name="completeAt" lay-verify="required">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+        	<div class="notcie"><b>数据量</b></div>
+            <input type="text" class="layui-input dataAmount" name="dataAmount" lay-verify="required">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+        	<div class="notcie"><b>数据规范</b></div>
+			<textarea name="dataStandard" class="layui-textarea dataStandard" lay-verify="required" ></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+        	<div class="notcie"><b>数据字段</b></div>
+			<textarea name="dataField"  class="layui-textarea dataField" lay-verify="required" ></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+        	<div class="notcie">
+        		<b>数据样例：</b>
+        		<span class="upLoadRarName"></span>
+        	</div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>客户名称</b></div>
+            <input type="text" class="layui-input price_input customerName" name="customerName">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>客户手机</b></div>
+            <input type="text" class="layui-input price_input customerPhone" name="customerPhone">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>客户附言</b></div>
+            <textarea name="customerState"  class="layui-textarea customerState" lay-verify="required" ></textarea>
+        </div>
+    </div>
+    <input id="base" type="hidden" value="${ctxPath}"/>
+</form>
+<script type="text/javascript" src="${ctxPath}/plugin/layui/layui.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/cooperation/customer_cooperation_edit.js"></script>
+</body>
+</html>

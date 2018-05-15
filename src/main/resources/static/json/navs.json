@@ -1,0 +1,21 @@
+[
+  {
+    "title": "数据合作",
+    "icon": "&#xe613;",
+    "spread": false,
+    "children": [
+      {
+        "title": "数据需求",
+        "icon": "&#xe609;",
+        "href": "data_cooperation/index",
+        "spread": false
+      },
+      {
+        "title": "客户数据",
+        "icon": "&#xe612;",
+        "href": "customer_cooperation/index",
+        "spread": false
+      }
+    ]
+  }
+]

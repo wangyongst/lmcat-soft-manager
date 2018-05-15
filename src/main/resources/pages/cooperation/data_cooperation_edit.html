@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="${ctxPath}/plugin/layui/css/layui.css" media="all"/>
+    <style type="text/css">
+        .layui-form-item .layui-input {
+            width: 400px;
+            display: inline-block;
+        }
+
+        .layui-textarea, .layui-select, .select {
+            width: 400px;
+        }
+
+        .notcie {
+            margin-bottom: 10px;
+        }
+
+        #upLoadImg, #samp {
+            background-color: grey;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .upLoadImgName, .upLoadRarName {
+            margin: 0 10px;
+        }
+
+        .showimg {
+            max-width: 376px;
+            max-height: 246px;
+            position: absolute;
+        }
+
+        .layui-select-disabled .layui-disabled {
+            border: none;
+            color: black !important;
+        }
+
+        .layui-disabled, .layui-disabled:hover {
+            color: black !important;
+        }
+
+        .layui-radio-disbaled > i {
+            color: #5FB878 !important;
+        }
+    </style>
+</head>
+<body class="childrenBody">
+<br><br>
+<form class="layui-form">
+    <input type="hidden" class="layui-input id" name="id" lay-verify="id">
+    <div class="layui-form-item">
+        <div class="layui-input-block" style="position: relative;">
+            <div class="notcie"><b>数据名称</b><span class="red">*必填</span><span>8-50个字符</span></div>
+            <input type="text" class="layui-input title" name="title" lay-verify="required">
+            <button type="button" class="layui-btn" id="upLoadImg">上传主图</button>
+            <span class="upLoadImgName"></span>
+            <img class="showimg" src=""/>
+            <span>规格376x246 jpg、png</span>
+        </div>
+    </div>
+    <input type="hidden" name="mainImageUrl" id="mainImageUrl" value="" class="mainImageUrl"/>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>数据描述</b><span class="red">*必填</span><span>1850个字符</span></div>
+            <textarea name="describtion" placeholder="请输入描述" class="layui-textarea describtion"
+                      lay-verify="required"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block select">
+            <div class="notcie"><b>数据类别</b><span class="red">*必填</span></div>
+            <select name="dataCategory" class="layui-select dataCategory" lay-verify="required">
+                <option value="">请选择数据类别</option>
+                <option value="人脸识别">人脸识别</option>
+                <option value="车辆识别">车辆识别</option>
+                <option value="文本语料">文本语料</option>
+                <option value="语音识别">语音识别</option>
+                <option value="视频处理">视频处理</option>
+                <option value="社交网络">社交网络</option>
+                <option value="医疗健康">医疗健康</option>
+                <option value="电子商务">电子商务</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>价格</b><span class="red">*必填</span></div>
+            <input type="text" class="layui-input price_input price" name="price" placeholder="输入为数字与字母">
+            <input type="radio" lay-filter="price_radio" class="price_radio" name="price" value="面议" title="面议">
+            <input type="radio" lay-filter="price_radio" class="price_radio" name="price" value="接受议价" title="接受议价">
+            <input type="radio" lay-filter="price_radio" class="price_radio" name="price" value="不接受议价" title="不接受议价">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>完成时间</b><span class="red">*必填</span></div>
+            <input type="text" class="layui-input completeAt" name="completeAt" lay-verify="required"
+                   placeholder="2019.01.08">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>数据量</b><span class="red">*必填</span></div>
+            <input type="text" class="layui-input dataAmount" name="dataAmount" lay-verify="required"
+                   placeholder="输入为数字与字母">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>数据规范</b><span class="red">*必填</span></div>
+            <textarea name="dataStandard" placeholder="请输入数据规范" class="layui-textarea dataStandard"
+                      lay-verify="required"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie"><b>数据字段</b><span class="red">*选填</span></div>
+            <textarea name="dataField" placeholder="请输入数据字段" class="layui-textarea dataField"
+                      lay-verify="required"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <div class="notcie">
+                <b>数据样例：</b>
+                <input type="button" class="layui-btn" id="samp" value="上传数据样例">
+                <span class="upLoadRarName"></span>
+                <span>仅支持zip/rar/JPG/PNG/GIF/WORD/EXCEL/CVS文件，大小限制30M以内</span>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="sampleUrl" id="sampleUrl" value="" class="sampleUrl"/>
+    <div class="layui-form-item">
+        <div class="layui-input-block demand">
+            <div class="notcie"><b>需求度：</b></div>
+            <input type="radio" name="demand" value="1" title="一星">
+            <input type="radio" name="demand" value="2" title="二星">
+            <input type="radio" name="demand" value="3" title="三星">
+            <input type="radio" name="demand" value="4" title="四星">
+            <input type="radio" name="demand" value="5" title="五星">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block status">
+            <div class="notcie"><b>数据状态：</b></div>
+            <input type="radio" name="status" value="进行中" title="进行中">
+            <input type="radio" name="status" value="完成" title="完成">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block commendFlag">
+            <div class="notcie"><b>推荐数据：</b></div>
+            <input type="radio" name="commendFlag" value="YES" title="是">
+            <input type="radio" name="commendFlag" value="NO" title="否">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block hotFlag">
+            <div class="notcie"><b>热门数据：</b></div>
+            <input type="radio" name="hotFlag" value="YES" title="是">
+            <input type="radio" name="hotFlag" value="NO" title="否">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block showStatus">
+            <div class="notcie"><b>是否上架：</b></div>
+            <input type="radio" name="showStatus" value="checked" title="是">
+            <input type="radio" name="showStatus" value="unchecked" title="否">
+        </div>
+    </div>
+    <div class="layui-form-item" style="margin-top:40px;text-align: center">
+        <div class="layui-input-block">
+            <button class="layui-btn saveBtn" lay-submit="" lay-filter="editSub">保存</button>
+        </div>
+    </div>
+    <input id="base" type="hidden" value="${ctxPath}"/>
+</form>
+<script type="text/javascript" src="${ctxPath}/plugin/layui/layui.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/cooperation/data_cooperation_edit.js"></script>
+</body>
+</html>

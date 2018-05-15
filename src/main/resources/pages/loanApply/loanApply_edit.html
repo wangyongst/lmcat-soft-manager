@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="${ctxPath}/plugin/layui/css/layui.css" media="all"/>
+</head>
+<body class="childrenBody">
+<br><br>
+<form class="layui-form">
+    <input type="hidden" class="layui-input id" name="id" lay-verify="id">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">名称</label>
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input personName" name="personName" lay-verify="personName"
+                           placeholder="请输入名称">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">手机</label>
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input personPhone" name="personPhone" lay-verify="personPhone"
+                           placeholder="请输入手机">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">手机</label>
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input personPhone" name="personPhone" lay-verify="personPhone"
+                           placeholder="请输入手机">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item status">
+        <label class="layui-form-label">分类状态</label>
+        <div class="layui-input-block">
+            <input type="radio" name="categoryStatus" value="1" title="启用">
+            <input type="radio" name="categoryStatus" value="0" title="禁用">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="editCategorySub">立即提交</button>
+            <button type="reset" id="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+    <input id="base" type="hidden" value="${ctxPath}"/>
+</form>
+<script type="text/javascript" src="${ctxPath}/plugin/layui/layui.js"></script>
+<script type="text/javascript" src="${ctxPath}/js/loanApply/loanApply_edit.js"></script>
+</body>
+</html>
