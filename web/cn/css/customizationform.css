@@ -1,0 +1,103 @@
+body{
+  background-color: rgba(244, 244, 244, 1);
+}
+.customizationform-form{
+  /*height: 1065px;*/
+  width: 1200px;
+  margin: 108px auto;
+  padding-bottom: 50px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+.form-wrap{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.form-wrap h3{
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 50px;
+}
+form{
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+form div{
+  margin-top: 30px;
+}
+form label{
+  font-weight: bolder;
+  margin-right: 20px;
+  height: 40px;
+  width: 120px;
+  text-align: left;
+  line-height: 30px;
+}
+.customization-type span, .data-type span{
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  margin-right: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  box-sizing: border-box;
+  border: 1px solid rgba(110, 110, 110, 0.6); 
+}
+.customization-type span, .data-type span{
+  cursor: pointer;
+}
+.span-active{
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(42, 130, 249, 1);
+}
+.name input,.company-name input,.company-address input, .company-tel input{
+  width: 400px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  border: 1px solid rgba(110, 110, 110, 0.6);
+}
+.requirement-des label{
+  vertical-align: top;
+}
+.requirement-des textarea{
+  vertical-align: top;
+  width: 800px;
+  height: 300px;
+  font-size: 12px;
+}
+.accessory input{
+  display: inline-block;
+}
+.tel-text{
+  font-size: 12px;
+  margin-left: 20px;
+}
+.submit{
+  width: 140px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 3px;
+  margin: 100px auto 120px;
+  background-color: rgba(25, 136, 203, 1);
+}
+
+.submit:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+

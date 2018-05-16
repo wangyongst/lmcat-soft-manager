@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>添加职位 - 龙猫数据</title>
+  <link rel="shortcut" href="../favicon.ico"  type="image/x-icon"/>
+  <link rel="icon" href="../favicon.ico"  type="image/x-icon"/>
+  <link rel="bookmark" href="../favicon.ico"  type="image/x-icon"/>
+  <link rel="stylesheet" type="text/css" href="../cn/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../cn/css/header.css">
+  <link rel="stylesheet" type="text/css" href="./css/publish_position.css">
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+  <script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- handlebars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+  <script type="text/javascript" src='../cn/js/initLeanCloud.js'></script>
+  <script type="text/javascript" src='../cn/js/reuseMethods.js'></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header clearfix">
+      <h3 class="text-muted">龙猫数据</h3>
+    </div>
+    <h2 class="new-product-heading">发布职位</h2>
+    <form class="new-product">
+      <div class="info-section">
+        <label>职位编号</label>
+        <input type="title" id="order" class="form-control" placeholder="职位编号" autofocus required="true">
+
+        <label for="position-title">职位名称</label>
+        <input type="title" id="title" class="form-control" placeholder="职位名称"  autofocus required='true'>
+        
+        <label>招聘人数</label>
+        <input type="title" id="number" class="form-control" placeholder="招聘人数" autofocus required="true">
+        
+        <label>工作年限</label>
+        <input type="title" id="year" class="form-control" placeholder="工作年限" autofocus required="true">
+
+        <label>职位地址</label>
+        <input type="title" id="address" class="form-control" placeholder="职位地址" autofocus required="true">
+
+        <label>薪资范围</label>
+        <input type="title" id="salary" class="form-control" placeholder="薪资范围" autofocus required="true">
+
+        <label>学历要求</label>
+        <input type="title" id="education" class="form-control" placeholder="学历要求" autofocus required="true">
+        
+        <label>工作类型</label>
+        <input type="title" id="type" class="form-control" placeholder="工作类型" autofocus required="true">            
+      </div>
+
+      <div class="info-section">
+        <label>详细要求</label>        
+        <textarea type='title' id="description" class="form-control" placeholder="详细要求" required="true"></textarea>
+      </div>
+      <div class="operate">
+        <button class="btn btn-lg btn-success " type="submit">发布</button>
+        <button class="btn btn-lg btn-primary " id="return">返回</a></button>
+      </div>       
+    </form>
+  </div> 
+    <script type="text/javascript">
+      (function() {
+         // 发布新产品
+        var Positions = AV.Object.extend('positions');      
+        function releaseNewPositions() {
+          
+          var order = $('#order').val();
+          var title = $("#title").val();
+          var number = $("#number").val();
+          var year = $('#year').val();
+          var address = $('#address').val();
+          var salary = $('#salary').val();
+          var education = $('#education').val();
+          var type = $('#type').val();
+          var description = $('#description').val();
+          
+          var positions = new Positions();
+          
+          positions.set('order', order);
+          
+          positions.set('position_title', title);
+          
+          positions.set('number', description);
+          
+          positions.set('year', year);
+          
+          positions.set('address', address);
+          
+          positions.set('salary', salary);
+          
+          positions.set('education', education);
+ 
+          positions.set('type', type);
+          
+          positions.set('description', description);
+                    
+          positions.save().then(function(e) {
+            $('#order').val('');
+            $("#title").val('');
+            $("#number").val('');
+            $('#year').val('');
+            $('#address').val('');
+            $('#salary').val('');
+            $('#education').val('');
+            $('#type').val('');
+            $('#description').val('');
+
+            alert('添加成功');            
+          }, function(error) {
+            alert(JSON.stringify(error));
+          });
+        }; 
+
+        if(isCurrentUser()){
+          $(".new-product").on('submit', function(e) {
+            e.preventDefault();
+            releaseNewPositions();
+          });
+          $('#return').on('click', function(e){
+            e.preventDefault();
+            window.location.href = 'products.html';
+          });
+        }else{
+          window.location.href = "login.html";
+        }
+      }());
+    </script>
+</body>
+</html>

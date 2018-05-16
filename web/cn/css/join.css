@@ -1,0 +1,287 @@
+body{
+    background-color: rgba(242, 245, 247, 1);
+}
+.join_banner img{
+    width: 100%;
+    height: 100%;
+}
+ /*内容部分*/
+.join-content{
+    width: 1200px;
+    margin: 70px auto 0;
+}
+/*左*/
+.join-content-left{
+    display: inline-block;
+    min-height: 700px;
+    width: 25%;
+    margin-right: 5%;
+    background-color: rgba(255, 255, 255, 1);
+}
+.join-content-left:hover{
+    cursor: pointer;
+}
+.join-content-left ul li{
+    line-height: 50px;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20%;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(210, 210, 210, 0.5);
+}
+.join-content-left-title{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(47, 118, 213, 1);
+}
+.join-content-left-active{
+    color: rgba(255, 0, 0, 0.7);
+}
+
+/*右*/
+.join-content-right{
+    display: inline-block;
+    position: relative;
+    width: 70%;
+    min-height: 700px;
+    background-color: rgba(255, 255, 255, 1);      
+}
+
+/*人才招聘*/
+.join-content-right-jobslist{
+    width: 90%;
+    margin: 0 auto;
+}
+.jobslist-title{
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(210, 210, 210, 1);
+}
+.join-content-right-jobslist ul{
+    margin-top: 20px;
+    cursor: pointer;
+}
+.join-content-right-jobslist ul li:first-child span{
+    display: inline-block;
+    line-height: 30px;
+    width: 20%;
+    font-size: 14px;
+    font-weight: bold;    
+    text-align: center;
+
+}
+.join-content-right-jobslist ul li:first-child span:first-child{
+    text-align: left;
+}
+
+.join-content-right-jobslist ul li:not(:first-child) span{
+    display: inline-block;
+    line-height: 30px;
+    width: 20%;
+    font-size: 12px;    
+    text-align: center;
+}
+.join-content-right-jobslist ul li:not(:first-child) span:first-child{
+    text-align: left;
+}
+/*招聘详情*/
+.jobsdetails-list{
+    margin-top: 20px;
+
+}
+.jobsdetails-list h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.jobsdetails-classify p{
+    display: inline-block;
+    width: 35%;
+}
+.jobsdetails-classify span{
+    font-size: 14px;
+    display: inline-block;
+    line-height: 30px;
+}
+
+.jobsdetails-classify{
+    
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(210, 210, 210, 0.8)
+}
+
+.jobsdetails-description h4, .jobsdetails-skill h4, .jobsdetails-require h4{
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.jobsdetails-description pre,.jobsdetails-skill pre,.jobsdetails-require pre{
+    font-size: 14px;
+    line-height: 30px;
+}
+
+/*薪酬福利*/
+.join-content-right-payment{
+    width: 90%;
+    margin: 0 auto;
+}
+.payment-title{
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(210, 210, 210, 1);
+}
+.join-content-right-payment img{
+    width: 100%;
+}
+.payment-content ul li{
+    margin-top: 20px;
+}
+.payment-content ul li span{
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(16, 127, 196, 1);    
+}
+.payment-content ul li p{    
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.payment-content .payment-more{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 15px;
+} 
+
+/*团队生活*/
+.join-content-right-team{
+    width: 90%;
+    margin: 0 auto;
+}
+.team-title{
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(210, 210, 210, 1);
+}
+.team-content{
+    margin-top: 50px;
+}
+
+.team-content div{
+    text-align: center;
+}
+.team-content div p{
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.team-content div{
+    background-color: rgba(244, 244, 244, 1);
+}
+.team-content div:first-child{
+    padding-top: 50px;
+}
+.team-content div:nth-child(3){
+    padding-top: 50px;
+}
+.team-content div:first-child span{
+    display: inline-block;
+    width: 338px;
+    vertical-align: top;
+}
+.team-content div:first-child span:last-child{    
+    margin-left: 30px;
+}
+.team-content div:nth-child(3) span{
+    display: inline-block;
+    width: 338px;
+    vertical-align: top;   
+}
+.team-content div:nth-child(3) span:last-child{  
+    margin-left: 30px;
+}
+
+
+/*职位详情*/
+.join-content-right-jobsdetails{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.join-content-right-jobsdetails .btn-wrap{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.join-content-right-jobsdetails .btn-wrap button{
+    border: none;
+    font-size: 12px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(28, 103, 193, 1);
+
+}
+.join-content-right-share{
+    position: absolute;
+    top: 10px;
+    left: 70%;
+
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

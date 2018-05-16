@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品详情列表 - 龙猫数据</title>
+	<link rel="shortcut" href="../favicon.ico"  type="image/x-icon"/>
+	<link rel="icon" href="../favicon.ico"  type="image/x-icon"/>
+	<link rel="bookmark" href="../favicon.ico"  type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="../cn/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../cn/css/header.css">
+	<link rel="stylesheet" type="text/css" href="./css/products.css">
+  <!-- Font Awesome -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- leancloud -->
+	<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+	<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- handlebars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<script type="text/javascript" src='../cn/js/initLeanCloud.js'></script>
+	<script type="text/javascript" src='../cn/js/reuseMethods.js'></script>
+  <style type="text/css">    
+    .products-nav{
+      width: 100%;
+      overflow: hidden;
+    }
+    .products-nav ul{
+      text-align: center;
+    }
+    .products-nav ul li{
+      display: inline-block;      
+      height: 50px;
+      width: 20%;
+      margin: 20px 10px;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(47, 118, 213, 1);
+      list-style: none;      
+      text-align: center;
+      line-height: 50px;
+    }  
+    .products-nav ul li:hover{
+      cursor: pointer;
+    }
+    .products-nav-li-active{
+      color: rgba(255, 0, 0, 1);
+    }
+    .products-content-ul{
+
+    }
+    .products-content-ul{
+      list-style: none;
+    }
+    .product-publish{
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+	<div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav pull-right">
+          <li role="presentation"><a href="#" id="logout" onclick="logout()">退出登录</a></li>
+        </ul>
+      </nav>
+      <h3 class="text-muted">龙猫数据</h3>
+    </div>
+    <div class="products-nav">
+      <ul class="products-nav-ul">
+        <li>中文产品</li>
+        <li>英文产品</li>
+        <li>招聘发布</li>
+        <li>新闻发布</li>
+      </ul>
+    </div>
+    <div class="products-content">
+      <ul class="products-content-ul">
+        <li style="width: 100%">
+          <div>
+            <a class="btn btn-primary new-product " href="publish_product.html" class="">发布一个新中文产品</a>
+          </div>    
+          <div class="row" id="products-detail">
+            <!-- Products list content -->
+            <script id="products-list" type="text/x-handlebars-template">
+              {{#each products}}
+              <div class="col-sm-6 col-md-4 product-detail" id="product-detail" style="display: inline-block;height: 200px;cursor: pointer; overflow: hidden;"> 
+                <div class="thumbnail">
+                  <div class="edit-product">
+                   <i class="fa fa-pencil fa-lg" id = "modification" style="margin-left: 70%;margin-right: 20px;"></i><i class="fa fa-trash-o fa-lg" id = "delete" ></i>
+                  </div>                                    
+                  <div class="caption">
+                    <h5>产品名称：{{{productTitle}}}</h5>
+                    <h5>编号：{{{num_id}}}</h5>
+                    <h6>一级分类：{{{classOne}}}</h6>
+                    <h6>二级分类：{{{classTwo}}}</h6>                                        
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </script>
+          </div>
+        </li>
+        <li style="display: none; width: 100%">
+          <div>
+            <a class="btn btn-primary new-product " href="publish_en_product.html" class="">发布一个新英文产品</a>
+          </div>    
+          <div class="row" id="en-products-detail">
+            <!-- Products list content -->
+            <script id="en-products-list" type="text/x-handlebars-template">
+              {{#each products}}
+              <div class="col-sm-6 col-md-4 product-detail" id="product-detail" style="display: inline-block;height: 200px;cursor: pointer; overflow: hidden;"> 
+                <div class="thumbnail">
+                  <div class="edit-product">
+                   <i class="fa fa-pencil fa-lg" id = "modification" style="margin-left: 70%;margin-right: 20px;"></i><i class="fa fa-trash-o fa-lg" id = "delete" ></i>
+                  </div>                                    
+                  <div class="caption">
+                    <h5>产品名称：{{{productTitle}}}</h5>
+                    <h5>编号：{{{num_id}}}</h5>
+                    <h6>一级分类：{{{classOne}}}</h6>
+                    <h6>二级分类：{{{classTwo}}}</h6>                                        
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </script>
+          </div>
+        </li>
+        <li style="display: none; width: 100%">
+          <div>
+            <a class="btn btn-primary new-product" href="publish_position.html" class="product-publish">发布一个新职位</a>
+          </div>    
+          <div class="row" id="positions-detail">
+            <!-- Products list content -->
+            <script id="positions-list" type="text/x-handlebars-template">
+              {{#each positions}}
+              <div class="col-sm-6 col-md-4" id="product-detail" style="display: inline-block;height: 200px;overflow: hidden;"> 
+                <div class="thumbnail">
+                  <div class="edit-product">
+                   <i class="fa fa-pencil fa-lg" id = "modification" style="margin-left: 70%;margin-right: 20px;cursor: pointer;"></i><i class="fa fa-trash-o fa-lg" id = "delete" ></i>
+                  </div>                  
+                  <div class="caption">
+                    <h5>职位名称：{{{title}}}</h5>
+                    <h5>编号：{{{order}}}</h5>                    
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </script>
+          </div>
+        </li>
+        <li style="display: none; width: 100%">
+          <div>
+            <a class="btn btn-primary new-product" href="publish_news.html" class="product-publish">发布一个新报道</a>
+          </div>    
+          <div class="row" id="news-detail">
+            <!-- Products list content -->
+            <script id="news-list" type="text/x-handlebars-template">
+              {{#each news}}
+              <div class="col-sm-6 col-md-4" id="product-detail" style="display: inline-block;height: 140px;overflow: hidden;"> 
+                <div class="thumbnail">                  
+                  <div class="edit-product">
+                   <i class="fa fa-pencil fa-lg" id = "modification" style="margin-left: 70%;margin-right: 20px;cursor: pointer;"></i><i class="fa fa-trash-o fa-lg" id = "delete" ></i>
+                  </div> 
+
+                  <div class="caption" style="min-height: 100px;">
+                    <h5>新闻标题：{{{report_title}}}</h5>
+                    <h5>编号：{{{report_order}}}</h5>                    
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </script>
+          </div>
+        </li>
+      </ul>      
+    </div>    
+  </div> 
+  <script type="text/javascript">
+  	(function(){
+      // handlebars context
+      var productsContext = {
+        products: [],    
+      };
+
+      var productsEnContext = {
+        products: [],
+      }
+
+      var positionsContext = {
+        positions: []
+      }
+
+      var newsContext = {
+        news: []
+      }
+      
+      $(".products-content-ul li").on('click', (e) => {
+        if(e.target.tagName === 'I' && e.target.id === 'modification'){
+          var index = $($($(e.target).parents('#product-detail'))[0]).prevAll().length;
+
+          modificationFun(index);          
+        }else if(e.target.tagName === 'I' && e.target.id === 'delete'){
+          var index = $($($(e.target).parents('#product-detail'))[0]).prevAll().length;
+          deleteFun(index);
+        }        
+      })
+
+      function modificationFun(index){
+      }
+      
+      function deleteFun(index){
+      }
+
+      // 导航栏切换      
+      $('.products-nav-ul li:first-child').css('color', 'rgba(255, 0, 0, 1)');
+       $('.products-nav-ul').on('click', (e) => {
+        $('.products-nav-ul li').css({
+          'color': 'rgba(255, 255, 255, 1)',
+        })
+        $(e.target).css({
+          'color': 'rgba(255, 0, 0, 1)',
+        })
+        var index = $('.products-nav-ul li').index(e.target);                
+        $('.products-content-ul li').css({
+          'display': 'none',
+        })
+        $($('.products-content-ul li')[index]).css({
+          'display': 'inline-block',
+        })
+      })      
+      
+      // 获取中文产品
+      function setupData() {
+        setCnConfig();
+        // LeanCloud - 查询        
+        var query = new AV.Query('Product');
+        query.include('owner');
+        query.include('image');
+        query.ascending('num_id');
+        query.find().then(function (products) {
+          products.forEach(function(product) {
+            // 标题 
+            var productTitle = product.get('title');
+            var objectId = product.get('objectid');
+
+            // 编号
+            var num_id = product.get('num_id');
+            // 一级分类
+            var classOne = product.get('category');
+            
+            // 二级分类
+            var classTwo = product.get('cate_a');
+
+            // 标签
+            var productTags = product.get('tags');
+            // 描述
+            var productDescription = product.get('description');
+            // 时间
+            var releaseTime = (product.createdAt.getMonth() + 1) + '/' + product.createdAt.getDate() + '/' +  product.createdAt.getFullYear();
+            // 发布者
+            var ownerUsername = product.get('owner').get('username');
+            // 产品图片
+            var productImage = product.get('image');
+            var productImageUrl;
+            if (productImage) {
+              productImageUrl = productImage.get('url');
+            } else {
+              productImageUrl = 'favicon.ico';
+            }
+
+            // 详情介绍
+            var details = product.get('details');
+
+            // 详情图片个数
+            var detailsImgArrLength = product.get('detailsImgArrLength');
+            // 获取图片详情
+            var detailsImgArr = [];
+            var detailsImgArrUrl = [];
+
+            for(var i = 0; i < detailsImgArrLength; i++){
+              detailsImgArr.push(product.get('detailsImgArr' + i));
+              detailsImgArrUrl.push(product.get('detailsImgArr' + i).get('url'));
+            }
+
+            // 产品详情图片描述
+            var detailsTextArr = product.get('detailsTextArr');
+
+            // 数据样例图片个数
+            var exampleImgArrLength =product.get('exampleImgArrLength');
+            var exampleImgArr = [];
+            var exampleImageUrl = [];
+            for(var i = 0; i < exampleImgArrLength; i++){
+              if(product.get('exampleImgArr' + i)){
+                exampleImgArr.push(product.get('exampleImgArr' + i));
+                exampleImageUrl.push(product.get('exampleImgArr' + i).get('url'))  
+              }              
+            }
+            // 数据样例图片描述
+            var exampleTextArr = product.get('exampleTextArr');
+          
+            productsContext.products.push({
+              num_id,
+              classOne,
+              classTwo,
+              // 产品图片
+              productImageUrl,
+              // 产品名称
+              productTitle,
+              // 产品标签
+              productTags,
+              // 产品描述
+              productDescription,
+              // 所有者
+              ownerUsername,
+              // 提交时间
+              releaseTime,
+              // 产品详情
+              details,
+              // 产品详情图片
+              detailsImgArrUrl,
+              // 产品详情描述
+              detailsTextArr,
+              // 数据样例详情
+              exampleImageUrl,
+              // 数据样例详情描述
+              exampleTextArr
+            })
+          });
+        
+          // use handlebars to update html
+          var source = $("#products-list").html();
+          var template = Handlebars.compile(source);
+          var html = template(productsContext);       
+          
+          $('#products-detail').html(html);
+        }).catch(function(error) {
+          console.log(error);
+        });
+      };
+
+      function setEnConfig(){
+        var APP_ID = 'OdA0zYQd63FL4XIXa0Kza5ex-MdYXbMMI';
+        var APP_KEY = 'dhRKpG5H3ncGIPQOJUOdIU4D';
+        AV.init({
+          appId: APP_ID,
+          appKey: APP_KEY
+        });
+      }
+
+      function setCnConfig(){
+        var APP_ID = 'Gry1S3RjPfdBXK0Lfqx8UwcC-gzGzoHsz';
+        var APP_KEY = 'dl9Oi6tRe7pxTid1s8mUO5TS';
+        AV.init({
+          appId: APP_ID,
+          appKey: APP_KEY
+        });
+      }
+
+      // 获取英文产品
+      function getEnProduct() {
+        // LeanCloud - 查询
+        setEnConfig();
+        var query = new AV.Query('enProduct');
+        query.include('owner');
+        query.include('image');
+        query.ascending('num_id');
+        query.find().then(function (products) {
+          products.forEach(function(product) {
+            // 标题 
+            var productTitle = product.get('title');
+            var objectId = product.get('objectid');
+
+            // 编号
+            var num_id = product.get('num_id');
+            // 一级分类
+            var classOne = product.get('category');
+            
+            // 二级分类
+            var classTwo = product.get('cate_a');
+
+            // 标签
+            var productTags = product.get('tags');
+            // 描述
+            var productDescription = product.get('description');
+            // 时间
+            var releaseTime = (product.createdAt.getMonth() + 1) + '/' + product.createdAt.getDate() + '/' +  product.createdAt.getFullYear();
+            // 发布者
+            var ownerUsername = product.get('owner').get('username');
+            // 产品图片
+            var productImage = product.get('image');
+            var productImageUrl;
+            if (productImage) {
+              productImageUrl = productImage.get('url');
+            } else {
+              productImageUrl = 'favicon.ico';
+            }
+
+            // 详情介绍
+            var details = product.get('details');
+
+            // 详情图片个数
+            var detailsImgArrLength = product.get('detailsImgArrLength');
+            // 获取图片详情
+            var detailsImgArr = [];
+            var detailsImgArrUrl = [];
+
+            for(var i = 0; i < detailsImgArrLength; i++){
+              detailsImgArr.push(product.get('detailsImgArr' + i));
+              detailsImgArrUrl.push(product.get('detailsImgArr' + i).get('url'));
+            }
+
+            // 产品详情图片描述
+            var detailsTextArr = product.get('detailsTextArr');
+
+            // 数据样例图片个数
+            var exampleImgArrLength =product.get('exampleImgArrLength');
+            var exampleImgArr = [];
+            var exampleImageUrl = [];
+            for(var i = 0; i < exampleImgArrLength; i++){
+              if(product.get('exampleImgArr' + i)){
+                exampleImgArr.push(product.get('exampleImgArr' + i));
+                exampleImageUrl.push(product.get('exampleImgArr' + i).get('url'))  
+              }              
+            }
+            // 数据样例图片描述
+            var exampleTextArr = product.get('exampleTextArr');
+            productsEnContext.products.push({
+              num_id,
+              classOne,
+              classTwo,
+              // 产品图片
+              productImageUrl,
+              // 产品名称
+              productTitle,
+              // 产品标签
+              productTags,
+              // 产品描述
+              productDescription,
+              // 所有者
+              ownerUsername,
+              // 提交时间
+              releaseTime,
+              // 产品详情
+              details,
+              // 产品详情图片
+              detailsImgArrUrl,
+              // 产品详情描述
+              detailsTextArr,
+              // 数据样例详情
+              exampleImageUrl,
+              // 数据样例详情描述
+              exampleTextArr
+            })
+          });
+        
+          // use handlebars to update html
+          var source = $("#en-products-list").html();
+          var template = Handlebars.compile(source);
+          var html = template(productsEnContext);                 
+          $('#en-products-detail').html(html);
+        }).catch(function(error) {
+          console.log(error);
+        });
+      };
+      // 获取招聘信息
+      function getPositionsData(){
+        setCnConfig();
+        var queryPositionss = new AV.Query('positions');
+        queryPositionss.ascending('order');
+        queryPositionss.find().then(function(positions){
+          positions.forEach(function(item, index){
+            var order = item.get('order');
+            var title = item.get('position_title');
+            
+            positionsContext.positions.push({
+              order,
+              title
+            });            
+          });
+          // use handlebars to update html
+          var source = $("#positions-list").html();
+          var template = Handlebars.compile(source);
+          var html = template(positionsContext);
+          $('#positions-detail').html(html);
+        })
+      }
+      // 获取新闻信息
+      function getNewsData(){
+        setCnConfig();
+
+        var queryNews = new AV.Query('Report');
+        queryNews.descending('createdAt');
+        queryNews.find().then(function(reports){
+          reports.forEach(function(report, index){
+            var report_order = report.get('report_order');
+            var report_title = report.get('report_title');
+            var report_time = report.get('report_time');
+            var report_origin = report.get('report_origin');
+            var report_author = report.get('report_author');
+            var report_details = report.get('report_details');
+
+            newsContext.news.push({
+              report_order,
+              report_time,
+              report_title,
+              report_author,
+              report_details,
+              report_origin,
+            })  
+          })
+
+          // use handlebars to update html
+          var source = $("#news-list").html();
+          var template = Handlebars.compile(source);
+          var html = template(newsContext);
+
+          $('#news-detail').html(html);
+        })
+
+      }
+
+
+
+      // 退出登录
+      $('#logout').on('click', function(){
+        AV.User.logOut();
+        window.location.href = "login.html";
+      })
+      
+      $(function() {
+        if (isCurrentUser()) {
+          setupData();          
+          getEnProduct();
+          getPositionsData();
+          getNewsData();
+          
+        } else {
+          window.location.href = "login.html";
+        }
+      });        
+    }())
+  </script>
+</body>
+</html>

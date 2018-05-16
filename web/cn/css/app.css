@@ -1,0 +1,469 @@
+
+/*banner*/
+.app-banner{
+  top: 58px;
+  position: relative;  
+}
+.app-banner img.banner-img{
+  width: 100%;
+  height: 600px;
+}
+.app-banner-text-wrap{
+  position: absolute;
+  width: 1200px;
+  height: 600px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-600px);
+}
+.banner-left{
+  position: absolute;
+  height: 100px;
+  top: 120px;
+  left: 222px;
+  transform: translateY(-50px);
+}
+.banner-left img{
+  width: 324px;
+  height: 647px;
+}
+.banner-right{
+  position: absolute;
+  height: 200px;
+  top: 205px;
+  right: 231px;
+  transform: translateY(-100px);
+  color: rgba(255, 255, 255, 1);
+}
+
+.banner-right h2{
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+.banner-right p{
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+.banner-right img{
+  display: inline-block;
+  width: 150px;
+}
+.banner-right img:hover{
+  cursor: pointer;
+}
+.banner-right img:last-child{
+  margin-left: 30px;
+  cursor: pointer;
+}
+/*发现红包*/
+.app-find{
+  height: 780px;
+  width: 100%;
+  margin-top: 58px;
+  position: relative;
+}
+.app-find-content-wrap{
+  position: absolute;
+  height: 100%;
+   width: 100%;
+  background-color: rgba(246, 246, 246, 0.7);
+  z-index: 9;
+}
+.app-find-content{
+  width: 1200px;
+  margin: 0 auto;
+}
+.app-find-content div{
+  display: inline-block;  
+}
+.app-find-content-left, .app-find-content-right{
+  width: 600px;
+  opacity: 0;
+}
+.app-find-content-left-text{
+  margin-left: 280px;
+  margin-top: 350px;
+}
+.app-find-content-left-text h2{
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30px;
+
+} 
+.app-find-content-left-text p{
+  font-size: 16px;
+  margin-top: 40px;
+  line-height: 25px;
+}
+.app-find-content-left-text img{
+  margin-top: 90px;
+  cursor: pointer;  
+}
+.app-find-content-right img{
+  width: 381px;
+  height: 502px;
+  margin-left: 150px;
+  margin-top: 180px;
+}
+
+/*任务*/
+.app-task{
+  width: 1200px;
+  margin: 0 auto;
+}
+.app-task-left, .app-task-right{
+  display: inline-block;
+}
+.app-task-left{
+  width: 600px;
+  opacity: 0;
+}
+.app-task-left img{
+  width: 433px;
+  height: 542px;
+  margin-left: 167px;
+}
+.app-task-right{
+  width: 600px;
+  opacity: 0;
+}
+.app-task-right div{  
+  margin-top: 200px;
+  margin-left: 100px;
+
+}
+.app-task-right div h3{
+  font-size: 30px;
+  font-weight: 700px;
+  margin-bottom: 30px;
+
+}
+.app-task-right div p{
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.app-task-right div img{
+  cursor: pointer;
+  margin-top: 10px;
+}
+/*邀请*/
+.app-invitation-wrap{
+  height: 780px;
+  background-color: rgba(246, 246, 246, 1);
+}
+.app-invitation{
+  width: 1200px;
+  margin: 0 auto;
+}
+.app-invitation-left, .app-invitation-right{
+  display: inline-block;
+  opacity: 0;
+  width: 600px;
+}
+.app-invitation-left div{
+  margin-left: 280px;
+  margin-top: 300px;
+}
+.app-invitation-left div h3{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;  
+}
+.app-invitation-left div p{
+  font-size: 16px;
+  margin-bottom: 100px;
+}
+.app-invitation-left div img{
+  cursor: pointer;
+}
+.app-invitation-right img{
+  width: 364px;
+  height: 298px;
+  margin-left: 100px;
+  margin-top: 300px;
+}
+/*工会*/
+.app-organization{
+  width: 1200px;
+  margin: 0 auto;  
+}
+
+.app-organization-left, .app-organization-right{
+  display: inline-block;
+  opacity: 0;
+  width: 50%;
+}
+.app-organization-left img{
+  width: 278px;
+  height: 620px;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.app-organization-right div{
+  margin-top: 300px;
+  margin-left: 100px;
+
+}
+.app-organization-right div h3{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.app-organization-right div p{
+  font-size: 16px;
+  margin-bottom: 100px;
+}
+.app-organization-right div img{
+  cursor: pointer;
+}
+
+
+/*流程*/
+.app-flow-wrap{
+  height: 656px;
+  background-color: rgba(242, 242, 242, 1);
+}
+.app-flow{
+  width: 1200px;
+  margin: 0 auto;
+}
+.app-flow-header{ 
+  padding-top: 100px;
+  opacity: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.app-flow-header h2{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.app-flow-content{
+  margin-top: 150px;
+  text-align: center;
+}
+.app-flow-content span{
+  opacity: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 105px;
+  text-align: center;
+}
+.app-flow-content span.app-img{
+  width: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.app-flow-content span.app-img img{
+  width: 60px;
+  margin-top: -20px;
+
+}
+.app-flow-content span p{
+  display: inline-block;
+  width: 105px;
+  font-size: 14px;
+  padding-top: 20px;  
+  text-align: center; 
+}
+/*动画*/
+
+.animate1{    
+  animation: animate1 1s ease-in-out 200ms forwards;
+}
+
+@keyframes animate1{
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateX(0);
+  }
+} 
+
+.animate2{    
+  animation: animate2 1s ease-in-out 200ms forwards;
+}
+
+@keyframes animate2{
+  0%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateX(0);
+  }
+} 
+.animate3{    
+  animation: animate3 1s ease-in-out 300ms forwards;
+}
+
+@keyframes animate3{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+} 
+.animate4{    
+  animation: animate4 1s ease-in-out 100ms forwards;
+}
+
+@keyframes animate4{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+} 
+.animate5{    
+  animation: animate5 1s ease-in-out 200ms forwards;
+}
+
+@keyframes animate5{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+} 
+.animate6{    
+  animation: animate6 1s ease-in-out 300ms forwards;
+}
+
+@keyframes animate6{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+} 
+.animate7{    
+  animation: animate7 1s ease-in-out 400ms forwards;
+}
+
+@keyframes animate7{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+} 
+.animate8{    
+  animation: animate8 1s ease-in-out 500ms forwards;
+}
+
+@keyframes animate8{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+} 
+.animate9{    
+  animation: animate9 1s ease-in-out 600ms forwards;
+}
+
+@keyframes animate9{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+} 
+.animate10{    
+  animation: animate10 1s ease-in-out 700ms forwards;
+}
+
+@keyframes animate10{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+} 
+.animate11{    
+  animation: animate11 1s ease-in-out 800ms forwards;
+}
+
+@keyframes animate11{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+}
+.animate12{    
+  animation: animate12 1s ease-in-out 900ms forwards;
+}
+
+@keyframes animate12{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;    
+    transform: translateY(0);
+  }
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

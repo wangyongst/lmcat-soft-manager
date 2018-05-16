@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>数据定制-龙猫数据-人工智能大数据服务提供商</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./css/base.css">
+<link rel="stylesheet" type="text/css" href="./css/customization.css">
+
+<link rel="stylesheet" type="text/css" href="./css/sidebar.css">
+<link rel="stylesheet" type="text/css" href="./css/pager.css">
+
+<link rel="shortcut" href="favicon.ico"  type="image/x-icon"/>
+<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+<link rel="bookmark" href="favicon.ico"  type="image/x-icon"/>
+
+<meta name="keywords" content="数据服务,数据产品服务,数据标注服务,图片标注服务,文本标注服务,语音标注服务,视频标注服务">
+<meta name="description" content="龙猫数据可根据客户的特定需求提供多种类型的数据采集、数据标注、数据众包等服务，以满足客户在模式识别领域进行科研、测试和产品开发的不同需要。数据众包热线：400-0007190">
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- leancloud -->
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- 分页 -->
+<script type="text/javascript" src = './js/pager.js'></script>
+<!-- handlebars -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script type="text/javascript" src='./js/initLeanCloud.js'></script>
+<script type="text/javascript" src='./js/reuseMethods.js'></script>
+<!-- 转化跟踪 -->
+<!-- google -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-810406365"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-810406365');
+</script>
+<!-- 百度统计 -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?6a5cd8b7015581608bf67e1865f79868";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<!-- google -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116468581-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116468581-1');
+</script>
+<!-- sem -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?532c56068ca3379a7860cfdd99c15746";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<!-- 神策统计 -->
+<script>
+  (function(para) {
+    var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+    w['sensorsDataAnalytic201505'] = n;
+    w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+    var ifs = ['track','quick','register','registerPage','registerOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister','getAppStatus'];
+    for (var i = 0; i < ifs.length; i++) {
+      w[n][ifs[i]] = w[n].call(null, ifs[i]);
+    }
+    if (!w[n]._t) {
+      x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+      x.async = 1;
+      x.src = p;
+      x.setAttribute('charset','UTF-8');
+      y.parentNode.insertBefore(x, y);
+      w[n].para = para;
+    }
+  })({
+    sdk_url: 'http://static.sensorsdata.cn/sdk/1.9.11/sensorsdata.min.js',
+    heatmap_url: 'http://static.sensorsdata.cn/sdk/1.9.11/heatmap.min.js',
+    name: 'FETotoro',
+    web_url: 'http://shence.longmaosoft.com/',
+    // server_url: 'http://shence.longmaosoft.com:8106/sa?project=default',
+    server_url: 'http://shence.api.longmaosoft.com/sa?project=default',
+    heatmap:{}
+  });
+  FETotoro.quick('autoTrack');
+</script>
+<!-- 判断设备类型 -->
+<script language="javascript">
+  // 平台、设备和操作系统
+  var system ={
+    win : false,
+    mac : false,
+    xll : false
+  };
+  // 检测平台
+  var p = navigator.platform;
+  system.win = p.indexOf("Win") == 0;
+  system.mac = p.indexOf("Mac") == 0;
+  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+
+  // 跳转语句，如果是手机访问就自动跳转到 m 页面
+  if (!system.win && !system.mac && !system.xll) {
+      window.location.href = "http://m.longmaosoft.com";
+  }
+</script>
+</head>
+<body>
+  <header >
+    <div class="cont">
+      <a href="../cn/index.html" id="index_a"><img id="icon" src="http://ozlo9aly1.bkt.clouddn.com/pc/images/logo.png" alt="龙猫数据">龙猫数据</a>
+      <ul>
+        <li><a href="../cn/index.html">首页</a></li>
+				<li class="current"><a href="../cn/service.html">产品服务</a></li>
+				<li><a href="../cn/solutions.html">行业方案</a></li>
+				<li><a href="../cn/serviceplan.html">免费计划</a></li>
+				<li><a href="../cn/labelplatform.html" class="blank">标注平台</a></li>
+        <li><a href="../cn/app.html">龙猫众包App</a></li>
+        <li><a href="../cn/cooperation.html">数据合作</a></li>
+				<li>
+					<dl>
+						<dt><a href="../cn/contact.html">关于我们</a></dt>
+						<dd><a href="../cn/join.html">加入我们</a></dd>
+					</dl>
+				</li>
+      </ul>
+      <p class="banner-switch"><a href="../en/index.html"><span id="EN"></span></a></p>
+    </div>
+  </header>
+  <div class="customization-banner common_banner">
+    <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-01-010.png">
+
+    <div class="customization-banner-text">
+      <div class="text-left animate1">
+        <h3>龙猫数据 专业人工智能大数据定制服务!</h3>
+
+        <p class="top"><span></span>时间紧？</p>
+
+        <p class="middle"><span></span>要求质量高？</p>
+
+        <p class="bottom"><span></span>找不到可靠数据？</p>
+      </div>
+      <div class="text-right animate2">
+        <a href="../cn/customizationform.html"><p>提交需求</p></a>
+        <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODE5NjczMF80NzcxODFfNDAwMDAwNzE5MF8yXw" target="_blank"><p class="qq">联系客服</p></a>
+      </div>
+    </div>
+  </div>
+  <div class="customization-flow">
+    <h3>定制流程</h3> 
+    <div class="animate3">
+      <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-02-010.png">   
+    </div>
+  </div>
+  <div class="customization-type">
+    <h3>定制类型</h3>
+    <div class="type-text">
+     <ul class="text-ul">
+       <li>
+         <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-01-030.png">
+         <span>
+           <h4>数据类型</h4>
+           <p>人工智能领域的文本、图片、视频、音频等任意格式的资源</p>
+         </span>
+       </li><li>
+         <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-01-020.png">
+         <span>
+           <h4>涉及领域</h4>
+           <p>无人驾驶、机器人、人脸识别、机器学习、自动化、人机交互、安防、医疗等各个领域</p>
+         </span>
+       </li>
+     </ul>
+    </div>
+  </div>
+  <div class="data-guarantee">
+    <h3>数据保障</h3>
+    <div class="guarantee-text">
+      <ul class="text-ul">
+        <li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-04-001.png">
+          <span>
+            <h4>速度快</h4>
+            <p>采集标注流程化高效，快速完成定制。</p>
+          </span>
+        </li><li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-04-002.png">
+          <span>
+            <h4>价格低</h4>
+            <p>省时省力，利用大众资源众包，为客户节约成本。</p>
+          </span>
+        </li><li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-04-003.png">
+          <span>
+            <h4>高质量</h4> 
+            <p>专业视角定制严格的采集标准，采集监控系统，数据零遗漏。多人审核与评估，层层保障。</p>  
+          </span>        
+        </li><li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-04-004.png">
+          <span>
+            <h4>保安全</h4>
+            <p>防屏蔽：数据接口加密处理</p>
+            <p>防盗取：网盘加密提取</p>
+            <p>防泄露：签订保密协议</p>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="date-delivery">
+    <h3>数据交付</h3>
+    <div class="delivery-text">
+      <ul class="text-ul">
+        <li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-05-001.png">
+          <span>
+            <h4>交付方式</h4>
+            <p>API：接口调用，IP白名单认证安全高效。</p>
+            <p>网盘自取：较小数据量可通过网盘提取方便快捷。</p>
+            <p>硬盘邮寄：对于容量较大的数据，可选择硬盘邮寄方式，为用户节省下载时间。</p>
+          </span>
+        </li><li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/customization-05-002.png">
+          <span>
+            <h4>数据格式</h4>
+            <p>多种数据格式转换，同时支持接口方式接入，XML、JSON、CSV、TXT、多数据链接支持。</p>  
+          </span>
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+  <a href="../cn/customizationform.html" class="customization-start" target="_blank">
+    马上定制
+  </a>
+  <!-- 侧边栏 -->
+  <div class="sidebar" >
+    <div class="sidebar-item">
+      <div class="image-qq sidebar-image"></div>
+      <div class="sidebar-text">客服QQ</div>  
+    </div>
+    <div class="sidebar-item">
+      <div class="image-phone sidebar-image"></div>
+      <div class="sidebar-text">联系我们</div>
+    </div>
+    <div class="sidebar-item">
+      <div class="image-info sidebar-image"></div>
+      <div class="sidebar-text" >数据定制</div>
+    </div>
+    <div class="sidebar-item">
+      <div class="image-returntop sidebar-image"></div>
+      <div class="sidebar-text" >返回顶部</div>
+    </div>
+  </div>
+  <!-- 电话 -->
+  <div class="phone-num">
+    <p>400-0007190</p>
+    <p class="triangle"></p>
+  </div>
+  <!-- 定制数据弹窗 -->
+  <div class="shade" style="display: none;">
+    <div class="panel">
+      <div class="panel_title"><p>个性化定制</p></div>
+      <form>
+        <div>
+          <label for="requirement_description" class="control-label col-sm-4">需求描述</label>
+        </div>
+        <div>
+          <textarea id="requirement_description" class="form-control col-sm-12 requirement_description" placeholder="请填写您的需求"></textarea>
+        </div>  
+        <div>
+          <label class="control-label col-sm-4" form="telephoneNumber">手机号码</label>
+        </div>
+        <div>
+          <input type="text" class="form-control col-sm-12 telephoneNumber" id="telephoneNumber" placeholder="请填写您的手机号码">
+        </div>
+        <div class="col-sm-12">
+          <button class="btn panel_cancel col-sm-2 col-sm-offset-3">取消</button>
+          <button class="btn panel_submit col-sm-2 col-sm-offset-2">提交</button>
+        </div>     
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="footer_href">
+      <ul>
+        <li><a href="../cn/contact.html">关于我们</a></li>
+        <li><a href="../cn/contact.html">联系我们</a></li>
+        <li><a href="../cn/agreement.html">服务协议</a></li>
+        <li><a href="../cn/statement.html">隐私声明</a></li>
+      </ul>
+    </div>
+    <div class="corporate_info">
+       Copyright © 2017 北京安捷智合科技有限公司。 保留所有权 | <a  href="http://www.miitbeian.gov.cn/">京ICP备14049781号</a>
+    </div>
+  </footer>
+<script type="text/javascript" src='./js/customization.js'></script>
+<script type="text/javascript" src='./js/sidebar.js'></script>
+<!-- 导航栏 -->
+<script type="text/javascript" src='./js/common.js'></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact-Longmao Data</title>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./css/base.css">
+  <link rel="stylesheet" type="text/css" href="./css/contact.css">
+  <link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+  <meta name="keywords" content="Longmao Data,Data Collection,Data Labeling,Image Annotation">
+  <meta name="description" content="Training Data for Machine Learning & Artificial Intelligence">
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+  <!-- jquery -->
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <!-- bootstrapjs -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!--  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script type="text/javascript" src='./js/initLeanCloud.js'></script>
+  <script type="text/javascript" src='./js/reuseMethods.js'></script>
+  <!-- 转化跟踪 -->
+  <!-- google -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-810406365"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-810406365');
+  </script>
+  <!-- 百度统计 -->
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6a5cd8b7015581608bf67e1865f79868";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <!-- google -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116468581-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116468581-1');
+  </script>
+  
+  <!-- sem -->
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?532c56068ca3379a7860cfdd99c15746";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <!-- 神策统计 -->
+  <script>
+    (function(para) {
+      var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+      w['sensorsDataAnalytic201505'] = n;
+      w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+      var ifs = ['track','quick','register','registerPage','registerOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister','getAppStatus'];
+      for (var i = 0; i < ifs.length; i++) {
+        w[n][ifs[i]] = w[n].call(null, ifs[i]);
+      }
+      if (!w[n]._t) {
+        x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+        x.async = 1;
+        x.src = p;
+        x.setAttribute('charset','UTF-8');
+        y.parentNode.insertBefore(x, y);
+        w[n].para = para;
+      }
+    })({
+      sdk_url: 'http://static.sensorsdata.cn/sdk/1.9.11/sensorsdata.min.js',
+      heatmap_url: 'http://static.sensorsdata.cn/sdk/1.9.11/heatmap.min.js',
+      name: 'FETotoro',
+      web_url: 'http://shence.longmaosoft.com/',
+      // server_url: 'http://shence.longmaosoft.com:8106/sa?project=default',
+      server_url: 'http://shence.api.longmaosoft.com/sa?project=default',
+      heatmap:{}
+    });
+    FETotoro.quick('autoTrack');
+  </script>
+  <!-- 判断设备 -->
+  <script language="javascript">
+      // 平台、设备和操作系统
+      var system = {
+        win: false,
+        mac: false,
+        xll: false
+      };
+      // 检测平台
+      var p = navigator.platform;
+      system.win = p.indexOf("Win") == 0;
+      system.mac = p.indexOf("Mac") == 0;
+      system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+
+      // 跳转语句，如果是手机访问就自动跳转到 m 页面
+      if(!system.win && !system.mac && !system.xll) {
+        window.location.href = "http://m.longmaosoft.com";
+      }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="cont">
+      <a href="../en/index.html" id="index_a"><img id="icon" src="http://ozlo9aly1.bkt.clouddn.com/pc/images/logo.png" alt="Longmao Data">Longmao Data</a>
+      <ul>
+        <li><a href="../en/index.html">Home</a></li>
+        <li><a href="../en/service.html">Product</a></li>
+        <li ><a href="../en/solutions.html">Solution</a></li>
+        <li><a href="../en/serviceplan.html">Free plan</a></li>
+        <li><a href="../en/about.html"">About</a></li>
+        <li class="current"><a href="../en/contact.html">Contact</a></li>
+      </ul>
+      <p class="banner-switch"><a href="../cn/index.html"><span id="CN"></span></a></p>
+    </div>
+  </header>
+  <div class="contact_banner common_banner">
+    <img src="http://p02hchp62.bkt.clouddn.com/pc/images/en-contact-banner-04.png" alt="Longmao Data">
+    <div>
+      <h3>Contact Us</h3>
+      <p>Longmao Data is the Human-in-the-Loop AI solution for data science and machine learning teams.</p>
+    </div>
+  </div> 
+  <div class="contact-form-wrap">
+    <form>
+      <h3>Message for us</h3>
+      <div>
+        <ul>
+          <li>
+            <input type="text" name="" id="name" placeholder="Name">
+            <input type="text" name="" id="phone" placeholder="Phone">
+          </li>
+          <li>
+            <input type="text" name="" id="address" placeholder="Address">
+            <input type="text" name="" id="email" placeholder="Email">    
+          </li>
+          <li>
+            <textarea id="require" placeholder="Please input your detailed requirements"></textarea>
+          </li>
+        </ul>
+        <button class="contact-send" id="contact-send">Send Message</button>        
+      </div>
+    </form><div class="contact-deatils-wrap">
+      <h3>Contact details</h3>
+      <ul>
+        <li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/contact-deatils-01.png">
+          <div class="contact-deatils-text">
+            <h4>Address</h4>
+            <p>20th  Floor, Tower A, Horizon International Building,</p>
+            <p>No.6, Zhichun Road,</p>
+            <p>Haidian District,</p>
+            <p>Beijing, China</p>
+          </div>
+        </li>
+        <li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/contact-deatils-02.png">
+          <div class="contact-deatils-text">
+            <h4>Tel</h4>
+            <p>400-0007-190</p>
+          </div>
+        </li>
+        <li>
+          <img src="http://p02hchp62.bkt.clouddn.com/pc/images/contact-deatils-03.png">
+          <div class="contact-deatils-text contact-deatils-text-last">
+            <h4>Support</h4>
+            <p>hello@longmaosoft.com</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div> 
+  <!-- map -->
+  <div class="contact-map">   
+    <div id="dituContent" class="map-container" style="width: 100%;height:300px;margin: auto;box-sizing: 2px 2px 2px rgba(110, 110, 110, 0.3); border-top: 1px solid gray;"></div>
+  </div>
+  <footer>
+    <div class="footer_href">
+      <ul>
+        <li><a href="../en/service.html">Product</a></li>
+        <li><a href="../en/solutions.html">Solution</a></li>
+        <li><a href="../en/serviceplan.html">Free plan</a></li>
+        <li><a href="../en/about.html">About</a></li>
+        <li><a href="../en/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="corporate_info">
+       Copyright © 2018 Longmao Data  Technologies Co., Ltd.</a>
+    </div>
+  </footer>
+</body>
+<script type="text/javascript" src = "http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script type="text/javascript" src = './js/map.js'> </script>
+<script type="text/javascript" src = './js/contact.js'></script>
+<script type="text/javascript" src = './js/common.js'></script>
+</html>

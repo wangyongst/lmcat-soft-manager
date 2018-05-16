@@ -1,0 +1,415 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Longmao Data - Artificial intelligence data service provider</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./css/base.css">
+<link rel="stylesheet" type="text/css" href="./css/index.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+<meta name="keywords" content="Longmao Data,Data Collection,Data Labeling,Image Annotation">
+<meta name="description" content="Longmao Data - Artificial intelligence data service provider">
+<!-- leancloud -->
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<!-- jquery -->
+<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<!-- bootstrapjs -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script type="text/javascript" src='./js/initLeanCloud.js'></script>
+<script type="text/javascript" src='./js/reuseMethods.js'></script>
+<script type="text/javascript" src='./js/common.js'></script>
+<!-- 转化跟踪 -->
+<!-- google -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-810406365"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-810406365');
+</script>
+<!-- 百度统计 -->
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?6a5cd8b7015581608bf67e1865f79868";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+<!-- google -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116468581-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116468581-1');
+</script>
+<!-- sem -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?532c56068ca3379a7860cfdd99c15746";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<!-- 神策统计 -->
+<script>
+  (function(para) {
+    var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+    w['sensorsDataAnalytic201505'] = n;
+    w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+    var ifs = ['track','quick','register','registerPage','registerOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister','getAppStatus'];
+    for (var i = 0; i < ifs.length; i++) {
+      w[n][ifs[i]] = w[n].call(null, ifs[i]);
+    }
+    if (!w[n]._t) {
+      x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+      x.async = 1;
+      x.src = p;
+      x.setAttribute('charset','UTF-8');
+      y.parentNode.insertBefore(x, y);
+      w[n].para = para;
+    }
+  })({
+    sdk_url: 'http://static.sensorsdata.cn/sdk/1.9.11/sensorsdata.min.js',
+    heatmap_url: 'http://static.sensorsdata.cn/sdk/1.9.11/heatmap.min.js',
+    name: 'FETotoro',
+    web_url: 'http://shence.longmaosoft.com/',
+    // server_url: 'http://shence.longmaosoft.com:8106/sa?project=default',
+    server_url: 'http://shence.api.longmaosoft.com/sa?project=default',
+    heatmap:{}
+  });
+  FETotoro.quick('autoTrack');
+</script>
+<!-- 判断设备类型 -->
+<script language="javascript">
+  // 平台、设备和操作系统
+  var system ={
+    win : false,
+    mac : false,
+    xll : false
+  };
+  // 检测平台
+  var p = navigator.platform;
+  system.win = p.indexOf("Win") == 0;
+  system.mac = p.indexOf("Mac") == 0;
+  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+
+  // 跳转语句，如果是手机访问就自动跳转到 m 页面
+  if (!system.win && !system.mac && !system.xll) {
+    window.location.href = "http://m.longmaosoft.com";
+  }
+</script>
+
+</head>
+<body>
+<header>
+  <div class="cont">
+     <a id="index_a" href="../en/index.html"><img id="icon" src="http://ozlo9aly1.bkt.clouddn.com/pc/images/logo.png" alt="Longmao Data">Longmao Data</a>
+     <ul>
+	      <li class="current"><a href="../en/index.html">Home</a></li>
+	      <li><a href="../en/service.html">Product</a></li>
+	      <li><a href="../en/solutions.html">Solution</a></li>
+	      <li><a href="../en/serviceplan.html">Free plan</a></li>
+        <li><a href="../en/about.html">About</a></li>
+	      <li><a href="../en/contact.html">Contact</a></li>
+     </ul>
+     <p class="banner-switch"><a href="../cn/index.html"><span id="CN"></span></a></p>
+  </div>
+</header>
+<div class="main" >	
+	<div class="index_wrap common_banner">
+			<div id="container" data-PageSwitch>
+				<div class="sections">
+					<a href="../en/service.html">
+						<div class="section active" id="section0">
+							<div class="intro_section0 animate1">
+                  <div>
+                    <h4>Longmao Data</h4>
+                    <h3>Artificial intelligence data service provider</h3>
+                    <p><span>Data Collection</span><span>Data Labeling</span></p>  
+                  </div>									
+									<div class="btn-more">More</div>
+							</div>
+						</div>
+					</a>
+          <a href="../en/serviceplan.html">
+            <div class="section" id="section1">
+              <div class="intro_section1">
+                <div class="section1_0">Image Annotation for Computer Vision</div>
+                <div class="section1_1">Improve machine learning object recognition with quality training data</div>                
+                <div class="section1_3">More</div>
+              </div>
+            </div>
+          </a> 
+
+				</div>
+			</div>
+	</div>
+	<div class="index-server">
+		<div class="index_server_title">
+      <h2 class="title_animate">Products and Services</h2>
+      <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-halve.png">
+    </div>		
+    <div class="index_server_details">
+      <ul>
+        <li>
+          <div>            
+          </div>
+          <h3>Image Data Services</h3>
+          <p>Image Collection</p>
+          <p>Image Annotation</p>          
+          <a href="../en/serviceplan.html" target="_blank"><button>Get Start</button></a>
+        </li>
+        <li >
+          <div>            
+          </div>
+          <h3>Speech Data Services</h3>
+          <p>Speech Data Collection</p>
+          <p>Human Transcription And Annotation</p>          
+          <a href="../en/serviceplan.html" target="_blank"><button>Get Start</button></a>
+        </li>
+        <li >
+          <div>            
+          </div>
+          <h3>Video Data Services</h3>
+          <p>Video Annotation</p>
+          <p>Video Data Collection</p>          
+          <a href="../en/serviceplan.html" target="_blank"><button>Get Start</button></a>
+        </li>
+        <li>
+          <div>            
+          </div>
+          <h3></h3>
+          <h3>Text Data Services</h3>
+          <p>Text Corpora</p>
+          <p>Human Annotation</p>          
+          <a href="../en/serviceplan.html" target="_blank"><button>Get Start</button></a>
+        </li>
+      </ul>	
+		</div>
+	</div>
+  <div class="index-solutions">
+    <div class="index-solutions-header">
+      <h2>Solution</h2>
+      <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-halve.png">
+    </div>
+    <div class="index-solutions-body">
+      <ul>
+        <a href="../en/solutions.html">
+          <li>
+            <div>
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-02-010.png">
+            </div>
+            <h3>Speech Solutions</h3>
+            <p>Longmao Data provides clients with complete speech synthesis technology. Longmao Data is committed to collecting world’s language corpus and processing voice contents including gender,emotion, and speech transcription. Longmao Data offers high-quality voice data for Automatic Speech Recognition (ASR), Text to Speech (TTS), etc</p>            
+          </li>
+        </a>
+        <a href="../en/solutions.html#2">
+          <li>
+            <div>
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-02-020.png">
+            </div>
+            <h3>Image Solutions</h3>
+            <p>Longmao Data has accumulated abundant experience helping clients collect, clean, and extract useful information from images.</p>
+            <p>The output data is usually used in facial recognition, autonomous driving, OCR, etc.</p>
+          </li>
+        </a>
+        <a href="../en/solutions.html#3">
+          <li>
+            <div>
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-02-030.png">
+            </div>
+            <h3>Text Solutions</h3>
+            <p>Longmao Data provides clients with text data collection and annotation service with its professional attitude and capability. The data package includes social network, domain knowledge base, interactive text in real world, newspapers, magazines, etc.</p>            
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <div class="index-advantage">
+    <div class="index-advantage-header">
+      <h2>Advantage</h2>
+      <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-halve.png">
+    </div>
+    <div class="index-advantage-body">
+      <ul>
+        <li>
+          <div class="icon">
+            
+          </div>
+          <div>
+            <h3>Higher Accuracy</h3>
+            <p>We are able to achieve higher accuracy with our massive proprietary datasets.</p>
+          </div>          
+        </li>
+        <li>
+          <div class="icon">
+            
+          </div>
+          <div>
+            <h3>Wide Coverage</h3>
+            <p>Comprehensive, efficient and professional data collection;Data labeling crowdsourcing management platform.</p>
+          </div>
+        </li>
+        <li>
+          <div class="icon">
+            
+          </div>
+          <div>
+            <h3>Fast Setup</h3>
+            <P>No need to spend the time developing in-house models; just call our APIs and go.</P>
+          </div>
+        </li>
+        <li>
+          <div class="icon">            
+          </div>
+          <div>
+            <h3>Cheaper</h3>
+            <p>Developed crowd sourcing system.</p>
+            <p>Intelligent task prject.</p>
+          </div>
+        </li>
+         <li>
+          <div class="icon">            
+          </div>
+          <div>
+            <h3>Assured Quality</h3>
+            <P>Guaranteed accuracy.</P>
+          </div>
+        </li>
+         <li>
+          <div class="icon">            
+          </div>
+          <div>
+            <h3>Fully Managed</h3>
+            <P>We do the heavy lifting so that you can relax.</P>
+          </div>
+        </li>          
+      </ul>
+    </div>
+  </div>
+  <div class="index-promoter">
+    <div class="index-promoter-header">
+      <h2>Our Management Team</h2>
+      <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-halve.png">
+    </div>
+    <div class="index-promoter-body">
+      <ul>
+        <li class="title_animate5">
+          <div class="index-promoter-body-icon">            
+          </div>
+          <div>
+            <h3>Zhi Zan </h3>
+            <P>Co-Founder/CEO </P>
+            <p>Alumni of the Renmin University of China </p>
+            <p class="index-promoter-small">Zhi is an accomplished veteran in the fields of product design and management, having worked for various well-known domestic Internet companies such as Baidu and SnapPea, before taking on the road of entrepreneurship. Zhi took the posts of Commercial Product Manager twice, once for the Baidu Network Alliance and later for SnapPea, during his period in both the companies. As for the latter, he was responsible for the promotional work of SnapPea’s applications and the joint operation of the gaming business line. Having started the business from scratch, Zhi had then managed to make over ten million Yuan’s worth of monthly earnings. </p>
+          </div>
+        </li>
+        <li class="title6">
+          <div>            
+          </div>
+          <div>
+            <h3>Yi Yao </h3>
+            <p>Co-Founder/CTO</p>
+            <p>Master of Engineering Graduate from Zhejiang University’s Faculty of Computer Sciences</p>
+            <p class="index-promoter-small">Yi is a seasoned expert in the fields of technology development and management, having served among many others, for Google, ZTE, Dianxin OS, and SnapPea. In 2010, Yi became one of the first batch of engineers to join the Innovation Works, and later a member of the Innovation Team in Dianxin OS. He joined the forces of SnapPea two years later, and led the development of Haoyou System and Gaming SDK. Under Yi’s leadership, Haoyou System accumulated over a hundred million user data, and SDK sees its applications being embedded in over a thousand games. </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="index-evaluate">
+    <div class="index-evaluate-header">
+      <h2>Clients Testimonials</h2>
+      <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-halve.png">
+      <h3>Read What's The People Are Saying About Us</h3>
+    </div>
+    <div class="index-evaluate-body">
+      <div id="evaluate">
+        <div class="evaluate-sections">           
+          <div class="evaluate-section evaluate-active" id="evaluate-section" >
+            <div class="evaluate-logo">
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-130.png">
+            </div>
+            <div class="evaluate1">             
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-100.png">
+              <div>
+                <p>This is a quick, effective team that really cares </p>
+                <p>for their clients success.</p>
+              </div>
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-110.png">
+            </div>            
+          </div>
+          <div class="evaluate-section evaluate-active" id="evaluate-section" >
+            <div class="evaluate-logo">
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-140.png">
+            </div>
+            <div class="evaluate1">             
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-100.png">
+              <div style="width: 650px">
+                <p>We are very pleased with the work the Longmao </p>
+                <p>Data team did for us</p>
+              </div>
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-110.png">
+            </div>            
+          </div>  
+          <div class="evaluate-section evaluate-active" id="evaluate-section" >
+            <div class="evaluate-logo">
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-150.png">
+            </div>
+            <div class="evaluate1">             
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-100.png">
+              <div style="width: 700px;">                
+                <p>We could not be happier with the </p>
+                <p>professionalism, expertise and service they </p>
+                <p>continue to provide us</p>
+              </div>
+              <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-06-110.png">
+            </div>            
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="index-custom">
+    <div class="index-custom-header">
+      <h2>Partners and Customers</h2>
+      <img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-halve.png">      
+    </div>
+    <div class="index-custom-body-module2">
+      <ul>
+        <li><a href="http://home.baidu.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2010.png"></a></li><li><a href="https://www.toutiao.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2020.png"></a></li><li><a href="https://www.tencent.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2030.png"></a></li><li><a href="http://www.deephi.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2040.png"></a></li><li><a href="http://www.cloudwalk.cn/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2050.png"></a></li><li><a href="https://www.chumenwenwen.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2060.png"></a></li><li><a href="https://www.mi.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2070.png"></a></li><li><a href="https://www.nio.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2080.png"></a></li><li><a href="http://www.westwell-lab.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2090.png"></a></li><li><a href="http://www.ainirobot.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2100.png"></a></li><li><a href="http://www.huawei.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2110.png"></a></li><li><a href="#"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2120.png"></a></li><li><a href="#"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2130.png"></a></li><li><a href="https://www.jd.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2140.png"></a></li><li><a href="http://www.163.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2150.png"></a></li><li><a href="https://www.sensoro.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2160.png"></a></li><li><a href="http://www.dress-plus.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2170.png"></a></li><li><a href="http://www.beyondcent.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2180.png"></a></li><li><a href="https://www.megvii.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2190.png"></a></li><li><a href="http://www.xiachufang.com/" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-2200.png"></a></li><li><a href="http://www.chukong-inc.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3000.png"></a></li><li><a href="http://www.icarevision.cn" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3001.png"></a></li><li><a href="http://www.samsung.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3002.png"></a></li><li><a href="https://www.xiaopeng.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3003.png"></a></li><li><a href="http://www.westalgo.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3004.png"></a></li><li><a href="http://www.edaijia.cn" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3005.png"></a></li><li><a href="http://www.motovis.cn" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3006.png"></a></li><li><a href="https://www.univer.top" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3007.png"></a></li><li><a href="https://www.dtwave.com" target="_blank"><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3008.png"></a></li><li><a><img src="http://p02hchp62.bkt.clouddn.com/pc/images/index-07-3009.png"></a></li>              
+      </ul> 
+    </div> 
+  </div>
+</div>
+<footer>
+	<div class="footer_href">
+		<ul>
+			<li><a href="../en/service.html">Product</a></li>
+			<li><a href="../en/solutions.html">Solution</a></li>
+			<li><a href="../en/serviceplan.html">Free plan</a></li>
+      <li><a href="../en/about.html">About</a></li>
+      <li><a href="../en/contact.html">Contact Us</a></li>
+		</ul>
+	</div>
+	<div class="corporate_info">
+		 Copyright © 2018 Longmao Data  Technologies Co., Ltd.</a>
+	</div>
+</footer>
+<script type="text/javascript" src='./js/pageswitch.js'></script>
+<script type="text/javascript" src='./js/index.js'></script>
+<script type="text/javascript" src='./js/common.js'></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+.labelplatform-banner{
+  position: relative;
+}
+.labelplatform-banner img{
+  width: 100%;
+}
+.labelplatform-banner-text{
+  position: absolute;
+  width: 800px;
+  height: 90px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-400px, -45px);
+}
+.labelplatform-banner-text h3{
+  font-size: 64px;
+  line-height: 90px;
+  opacity: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+.labelplatform-banner-text a{
+  text-decoration: none;
+}
+.labelplatform-banner-text h3:hover{
+  cursor: pointer;
+}
+/*模块1*/
+.labelplatform-content-module1{
+  width: 1200px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.labelplatform-content-module1-title h3{
+  font-size: 36px;
+  line-height: 50px;
+  color: #212121;
+  text-align: center;
+}
+.labelplatform-content-module1-title p{
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 26px;
+  margin-bottom: 80px;
+  color: #212121;
+  text-align: center;
+}
+.labelplatform-content-module1-content{
+  opacity: 0;
+}
+.tabs-header ul {
+  text-align: center;  
+  border-bottom: 1px solid #666666;
+}
+.tabs-header ul:hover{
+  cursor: pointer;
+}
+.tabs-header ul li{
+  display: inline-block;
+  width: 25%;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 25px;
+  text-align: center;
+}
+.tabs-body ul li{
+  width: 100%;
+  display: none;
+  height: 450px;
+}
+.tabs-body ul li img{
+  width: 600px;
+  margin-top: 78px;
+  vertical-align: top;
+}
+.tabs-body ul li span{
+  display: inline-block;
+  width: 400px;
+  margin-top: 120px;
+  margin-left: 112px;
+  vertical-align: top;
+}
+.tabs-body ul li span h3{
+  font-size: 28px;
+  line-height: 40px;
+  margin-bottom: 19px;
+  color: #212121;
+}
+.tabs-body ul li span p{
+  font-size: 20px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.tabs-body ul li span button{
+  border: none;
+  margin-top: 45px;
+  font-size: 20px;
+  width: 250px;
+  height: 59px;
+  line-height: 59px;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 30px;
+  background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/button2.png');
+  background-size: cover;
+}
+
+/**/
+.labelplatform-content-module2{
+  width: 1200px;
+  margin: 0 auto;
+}
+.labelplatform-content-module2-title{
+  opacity: 0;
+}
+.labelplatform-content-module2-title h3{
+  margin: 115px 0 78px;
+  font-size: 36px;
+  line-height: 50px;
+  color: #212121;
+  text-align: center;
+}
+.labelplatform-content-module2-content{
+  opacity: 0;
+}
+.labelplatform-content-module2-content ul{
+  text-align: center;
+  margin-bottom: 100px;
+}
+.labelplatform-content-module2-content ul li{
+  width: 280px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.labelplatform-content-module2-content ul li:not(:first-child){
+  margin-left: 180px;
+}
+.labelplatform-content-module2-content ul li img{
+  height: 61px;
+}
+.labelplatform-content-module2-content ul li h4{
+  margin: 35px 0 29px;
+  font-size: 18px;
+  line-height: 25px;
+  color: #212121;
+  text-align: center;
+}
+.labelplatform-content-module2-content ul li p{
+  line-height: 14px;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #212121;
+  text-align: center;
+}
+
+.labelplatform-content-module3{
+  width: 1200px;
+  padding-top: 105px;
+  height: 400px;
+  background-color: #F5F5F5;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.labelplatform-content-module3-title{
+  opacity: 0;
+}
+.labelplatform-content-module3-title h3{
+  margin-bottom: 100px;
+  text-align: center;
+  font-size: 36px;
+  line-height: 50px;
+  color: #212121;
+}
+.labelplatform-content-module3-content ul{
+  text-align: center;
+}
+.labelplatform-content-module3-content ul li{
+  display: inline-block;
+  vertical-align: top;
+}
+.labelplatform-content-module3-content ul li{
+  opacity: 0;
+}
+.labelplatform-content-module3-content ul li:nth-child(2n){
+  width: 30px;
+  margin: 0 20px;
+}
+.labelplatform-content-module3-content ul li:nth-child(2n) img{
+  width: 20px;
+  vertical-align: top;
+}
+.labelplatform-content-module3-content ul li:nth-child(2n + 1){
+  width: 180px;
+}
+.labelplatform-content-module3-content ul li:nth-child(2n + 1) img{
+  width: 30px;
+  vertical-align: top;
+}
+.labelplatform-content-module3-content ul li:nth-child(2n + 1) span{
+  width: 100px;
+  margin-left: 10px;
+  vertical-align: top;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  color: #999;
+}
+
+
+/*动画*/
+.animate1{        
+    animation: animate1 1s ease-in-out 200ms forwards;
+  }
+@keyframes animate1{
+    0%{
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+ }
+.animate2{        
+    animation: animate2 1s ease-in-out 200ms forwards;
+  }
+@keyframes animate2{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+
+.animate3{        
+    animation: animate3 1s ease-in-out 200ms forwards;
+  }
+@keyframes animate3{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+.animate4{        
+    animation: animate4 1s ease-in-out 300ms forwards;
+  }
+@keyframes animate4{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+ .animate5{        
+    animation: animate5 1s ease-in-out 400ms forwards;
+  }
+@keyframes animate5{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+ .animate6{        
+    animation: animate6 1s ease-in-out 500ms forwards;
+  }
+@keyframes animate6{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+ .animate7{        
+    animation: animate7 1s ease-in-out 600ms forwards;
+  }
+@keyframes animate7{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+ .animate8{        
+    animation: animate8 1s ease-in-out 700ms forwards;
+  }
+@keyframes animate8{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+
+.animate9{        
+    animation: animate9 1s ease-in-out 800ms forwards;
+  }
+@keyframes animate9{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

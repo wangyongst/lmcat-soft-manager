@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>产品服务-龙猫数据-人工智能大数据服务提供商</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./css/base.css">
+<link rel="stylesheet" type="text/css" href="./css/service.css">
+<link rel="stylesheet" type="text/css" href="./css/sidebar.css">
+<link rel="stylesheet" type="text/css" href="./css/pager.css">
+
+<link rel="shortcut" href="favicon.ico"  type="image/x-icon"/>
+<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+<link rel="bookmark" href="favicon.ico"  type="image/x-icon"/>
+
+<meta name="keywords" content="数据服务,数据产品服务,数据标注服务,图片标注服务,文本标注服务,语音标注服务,视频标注服务">
+<meta name="description" content="龙猫数据可根据客户的特定需求提供多种类型的数据采集、数据标注、数据众包等服务，以满足客户在模式识别领域进行科研、测试和产品开发的不同需要。数据众包热线：400-0007190">
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- leancloud -->
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- 分页 -->
+<script type="text/javascript" src = './js/pager.js'></script>
+<!-- handlebars -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script type="text/javascript" src='./js/initLeanCloud.js'></script>
+<script type="text/javascript" src='./js/reuseMethods.js'></script>
+<!-- 转化跟踪 -->
+<!-- google -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-810406365"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-810406365');
+</script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6a5cd8b7015581608bf67e1865f79868";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- google -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116468581-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116468581-1');
+  </script>
+<!-- sem -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?532c56068ca3379a7860cfdd99c15746";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<!-- 神策统计 -->
+<script>
+  (function(para) {
+    var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+    w['sensorsDataAnalytic201505'] = n;
+    w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+    var ifs = ['track','quick','register','registerPage','registerOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister','getAppStatus'];
+    for (var i = 0; i < ifs.length; i++) {
+      w[n][ifs[i]] = w[n].call(null, ifs[i]);
+    }
+    if (!w[n]._t) {
+      x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+      x.async = 1;
+      x.src = p;
+      x.setAttribute('charset','UTF-8');
+      y.parentNode.insertBefore(x, y);
+      w[n].para = para;
+    }
+  })({
+    sdk_url: 'http://static.sensorsdata.cn/sdk/1.9.11/sensorsdata.min.js',
+    heatmap_url: 'http://static.sensorsdata.cn/sdk/1.9.11/heatmap.min.js',
+    name: 'FETotoro',
+    web_url: 'http://shence.longmaosoft.com/',
+    // server_url: 'http://shence.longmaosoft.com:8106/sa?project=default',
+    server_url: 'http://shence.api.longmaosoft.com/sa?project=default',
+    heatmap:{}
+  });
+  FETotoro.quick('autoTrack');
+</script>
+<!-- 判断设备类型 -->
+<script language="javascript">
+  // 平台、设备和操作系统
+  var system ={
+    win : false,
+    mac : false,
+    xll : false
+  };
+  // 检测平台
+  var p = navigator.platform;
+  system.win = p.indexOf("Win") == 0;
+  system.mac = p.indexOf("Mac") == 0;
+  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+
+  // 跳转语句，如果是手机访问就自动跳转到 m 页面
+  if (!system.win && !system.mac && !system.xll) {
+  	  window.location.href = "http://m.longmaosoft.com";
+  }
+</script>
+</head>
+<body>
+<header>
+  <div class="cont">
+	<a href="../cn/index.html" id="index_a"><img id="icon" src="http://ozlo9aly1.bkt.clouddn.com/pc/images/logo.png" alt="龙猫数据">龙猫数据</a>
+    <ul>
+      <li><a href="../cn/index.html">首页</a></li>
+				<li class="current"><a href="../cn/service.html">产品服务</a></li>
+				<li><a href="../cn/solutions.html">行业方案</a></li>
+				<li><a href="../cn/serviceplan.html">免费计划</a></li>
+				<li><a href="../cn/labelplatform.html" class="blank">标注平台</a></li>
+		    <li><a href="../cn/app.html">龙猫众包App</a></li>
+		    <li><a href="../cn/cooperation.html">数据合作</a></li>
+				<li>
+					<dl>
+						<dt><a href="../cn/contact.html">关于我们</a></dt>
+						<dd><a href="../cn/join.html">加入我们</a></dd>
+					</dl>
+				</li>
+    </ul>
+    <p class="banner-switch"><a href="../en/index.html"><span id="EN"></span></a></p>
+  </div>
+</header>
+
+<div class="service_banner common_banner">
+	<img src="http://p02hchp62.bkt.clouddn.com/pc/images/product.png">
+	<div class="service_text_warp">
+		<h3>图像、视频、语音、文本</h3>
+		<p>专业的团队高效、稳定提供数据标注服务</p>
+	</div>
+</div>
+<div class="service_search">
+	<div class="search_wrap">
+		<input type="text" name="" class="search_input" placeholder="请输入您需要的产品服务" autofocus="true"><span class="search_cut"></span><span class="search_text">搜索</span>	
+	</div>
+</div>
+<div class="service-classify" style="width: 1200px; margin: 0 auto;">
+  <div class="classify-wrap" id="classify-wrap" >
+      
+  </div>
+</div>
+<div class="main serveice_main" >
+	<div class="service_wrap "  style="min-height: 900px">
+
+	</div>
+	<div class="pagination_wrap" >
+	  	<ul class="pagination" id="servicePagination">
+	    </ul>		
+	</div>
+</div>
+<div class="loading">
+	
+</div>
+<!-- classify list  -->
+<script id="classify-list" type="text/x-handlebars-template">
+  <ul>
+    {{#each categorys}}
+      <li class="category">
+        <span>{{type}}</span><ul class="properties">
+          {{#each properties}}
+            <li>{{type}}</li>
+          {{/each}}
+          <a href="../cn/customization.html"><div id="customization">数据定制</div></a>
+        </ul>
+      </li>
+    {{/each}}  
+  </ul>  
+</script>
+<!-- Products list content -->
+<script id="products-list" type="text/x-handlebars-template">
+  {{#each products}}
+  <div class="service_item_wrap">
+    <div class="service_item">
+      	<div class="service_img"><img src={{productImageUrl}}></div>
+		<div class="service_text">
+			<h3>{{productTitle}}</h3>
+			<p>{{productDescription}}</p>
+			<div>
+				{{# productTags}}
+      	<span>{{{this}}}</span>
+      	{{/ productTags}} 
+			</div>
+		</div>
+    </div>
+   </div>
+  {{/each}}
+</script>
+<!-- 侧边栏 -->
+<div class="sidebar" >
+	<div class="sidebar-item">
+		<div class="image-qq sidebar-image"></div>
+		<div class="sidebar-text">客服QQ</div>	
+	</div>
+	<div class="sidebar-item">
+		<div class="image-phone sidebar-image"></div>
+		<div class="sidebar-text">联系我们</div>
+	</div>
+	<div class="sidebar-item">
+		<div class="image-info sidebar-image"></div>
+		<div class="sidebar-text" >数据定制</div>
+	</div>
+	<div class="sidebar-item">
+		<div class="image-returntop sidebar-image"></div>
+		<div class="sidebar-text" >返回顶部</div>
+	</div>
+</div>
+<!-- 电话 -->
+<div class="phone-num">
+	<p>400-0007190</p>
+	<p class="triangle"></p>
+</div>
+<!-- 定制数据弹窗 -->
+<div class="shade" style="display: none;">
+  <div class="panel">
+    <div class="panel_title"><p>个性化定制</p></div>
+    <form>
+      <div>
+        <label for="requirement_description" class="control-label col-sm-4">需求描述</label>
+      </div>
+      <div>
+        <textarea id="requirement_description" class="form-control col-sm-12 requirement_description" placeholder="请填写您的需求"></textarea>
+      </div>  
+      <div>
+        <label class="control-label col-sm-4" form="telephoneNumber">手机号码</label>
+      </div>
+      <div>
+        <input type="text" class="form-control col-sm-12 telephoneNumber" id="telephoneNumber" placeholder="请填写您的手机号码">
+      </div>
+      <div class="col-sm-12">
+        <button class="btn panel_cancel col-sm-2 col-sm-offset-3">取消</button>
+        <button class="btn panel_submit col-sm-2 col-sm-offset-2">提交</button>
+      </div>     
+    </form>
+  </div>
+</div>
+<footer>
+	<div class="footer_href">
+		<ul>
+			<li><a href="../cn/contact.html">关于我们</a></li>
+			<li><a href="../cn/contact.html">联系我们</a></li>
+			<li><a href="../cn/agreement.html">服务协议</a></li>
+			<li><a href="../cn/statement.html">隐私声明</a></li>
+		</ul>
+	</div>
+	<div class="corporate_info">
+		 Copyright © 2017 北京安捷智合科技有限公司。 保留所有权 | <a  href="http://www.miitbeian.gov.cn/">京ICP备14049781号</a>
+	</div>
+</footer>
+<script type="text/javascript" src='./js/service.js'></script>
+<script type="text/javascript" src='./js/sidebar.js'></script>
+<!-- 导航栏 -->
+<script type="text/javascript" src='./js/common.js'></script>
+</body>
+</html>

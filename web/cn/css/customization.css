@@ -1,0 +1,247 @@
+body{
+  background-color: rgba(244, 244, 244, 1);
+}
+/*banner栏样式*/
+.customization-banner{
+  position: relative;
+  padding-top: 58px;  
+}
+.customization-banner img{
+  width: 100%;
+}
+
+.customization-banner-text{
+  position: absolute;
+  top: 41%;
+  height: 200px;
+  width: 100%; 
+  /*transform: translateY(-50px;);*/
+  color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+/*banner 左侧文字样式*/
+.text-left{
+  float: left;
+  margin-left: 8%;
+  width: 500px;
+
+}
+
+.text-left h3{
+  font-size: 28px;
+}
+
+.text-left p{
+  height: 20px;
+  line-height: 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  padding-left: 110px;
+}
+
+.text-left p span{
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.text-left p.top span {
+  background-color: rgba(252, 0, 8, 1);
+}
+
+.text-left p.middle span {
+  background-color: rgba(255, 255, 13, 1);
+}
+
+.text-left p.bottom span {
+  background-color: rgba(33, 255, 255, 1);
+}
+
+/*banner 右侧文字样式*/
+.text-right{
+  float: right;
+  margin-right: 8%;
+}
+.text-right a:hover{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+.text-right a p{
+  width: 140px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 1);
+}
+.text-right a p:hover{
+  cursor: pointer;
+}
+.text-right a:nth-child(1) p{
+  background-color: rgba(25, 136, 203, 1);
+}
+.text-right a:nth-child(2) p{
+  margin-top: 32px;
+  background-color: rgba(253, 135, 10, 1); 
+}
+
+/*li 公共样式*/
+ul.text-ul li{
+  display: inline-block;
+  width: 50%;
+  margin-top: 50px;
+  padding-left: 100px;
+}
+ul.text-ul li img{
+  width: 84px;
+  height: 84px;
+  vertical-align: top;
+}
+ul.text-ul li span{
+  vertical-align: top;
+  display: inline-block;  
+  width: 260px;
+  margin-left: 30px;
+}
+ul.text-ul li span h4{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+ul.text-ul li span p{
+  font-size: 14px;  
+  line-height: 20px;
+}
+
+/*定制流程*/
+.customization-flow{
+  width: 1200px;
+  height: 332px;
+  margin: 50px auto 0;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+.customization-flow h3, .customization-type h3,.data-guarantee h3, .date-delivery h3{
+  font-size: 18px;
+  margin-left: 50px;  
+  padding-top: 30px;
+  color: rgba(83, 83, 83, 1);
+}
+.customization-flow div{
+  margin: 50px auto;
+  width: 1103px;
+}
+.customization-flow img{
+  width: 100%;
+}
+
+/*定制类型*/
+
+.customization-type{
+  width: 1200px;
+  height: 256px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  margin: 50px auto 0;
+}
+.type-text{
+  opacity: 0;
+}
+
+/*数据保障*/
+.data-guarantee{
+  width: 1200px;
+  height: 375px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  margin: 50px auto 0;
+}
+.guarantee-text{
+  opacity: 0;
+}
+
+/*数据交付*/
+.date-delivery{
+  width: 1200px;
+  height: 289px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  margin: 50px auto 0;
+}
+.delivery-text{
+  opacity: 0;
+}
+/*马上定制*/
+.customization-start{
+  display: block;
+  width: 241px;
+  height: 68px;
+  line-height: 68px;
+  margin: 70px auto 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(25, 136, 203, 1);
+  border-radius: 5px;
+  font-size: 32px;
+}
+
+.customization-start:hover{
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+/*动画*/
+.animate1{        
+  animation: animate1 1s ease-in-out 100ms forwards;
+}
+@keyframes animate1{
+    0%{
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+ }  
+.animate2{        
+  animation: animate2 1s ease-in-out 100ms forwards;
+}
+@keyframes animate2{
+    0%{
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+.animate3{        
+  animation: animate2 1s ease-in-out 100ms forwards;
+}
+@keyframes animate2{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+ }
+
+
+
+
+
+
+
+
+

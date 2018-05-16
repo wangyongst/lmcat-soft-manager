@@ -1,0 +1,185 @@
+
+/*侧边栏*/
+.sidebar{
+	position: fixed;
+	bottom: 180px;
+	right: 20px;
+	height: 200px;
+	width: 50px;
+}
+
+.sidebar-item{
+	width: 36px;
+	height: 36px;
+	margin-bottom: 6px;
+	background-color: #212121;
+
+}
+.sidebar-item:hover{
+	cursor: pointer;
+}
+.sidebar-image{
+	width: 36px;
+	height: 36px;
+	background-repeat: no-repeat;	
+	background-size: 25px 25px;
+	background-position: 5px 5px;
+	background-color: #212121;
+}
+.image-qq{
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/qq.png');
+}
+.image-phone{
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/phone.png');
+}
+.image-info{
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/info.png');	
+}
+.image-returntop{
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/returntop.png');	
+}
+
+.sidebar-text{
+	display: none;
+	font-size: 10px;
+	text-align: center;
+	padding: 5px 5px;
+	color: #FFFFFF;
+	background-color: #212121;
+}
+
+/*电话*/
+.phone-num{
+	position: fixed;
+	display: none;
+	right: 85px;
+	bottom: 302px;
+	width: 121px;
+	height: 35px;
+}
+.phone-num p{
+	display: inline-block;
+	line-height: 35px;
+	width: 100%;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-align: center;
+	background: #212121;
+}
+.phone-num p a{
+	text-decoration: none;
+	color: #fff;
+}
+.phone-num p.triangle{
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: 121px;
+	width: 0;
+	height: 0;
+	background-color: rgba(255, 255, 255, 0);
+	border-left: 12px solid #212121;
+	border-top:12px solid rgba(255, 255, 255, 0);
+	border-bottom: 12px solid rgba(255, 255, 255, 0);
+	border-right: 12px solid rgba(255, 255, 255, 0);
+}
+
+
+/*定制panel*/
+.shade{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.panel{
+	width: 348px;
+	height: 417px;
+	margin: 0 auto;
+	margin-top: 15%;
+	border-radius: 6px;
+	background-color: #fff;
+	border: 1px solid #eee;
+}
+.panel_title{
+	width: 100%;
+	height: 86px;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+.panel_title p{
+	text-align: center;
+	height: 86px;
+	line-height: 86px;
+	font-size: 18px;
+	color: #212121;
+	border-bottom: 1px solid #eee;
+}
+.shade form div,.shade form div label,.shade form div textarea,.shade form div input{
+	margin-top: 20px;
+}
+.shade form div label{
+	font-size: 14px;
+}
+.shade form div textarea#requirement_description{
+	display: inline-block;
+	width: 300px;
+	margin-left: 24px;	
+	height: 70px;
+}
+
+.telephoneNumber{
+	display: inline-block;
+	width: 300px;
+	margin-left: 24px;	
+}
+
+.panel_cancel{
+	background-color: #fff;
+	color: #212121;
+	border: 1px solid #212121;
+}
+.panel_submit{
+	background-color: #fff;
+	color: #212121;
+	border: 1px solid #212121;
+}
+
+.panel_submit:hover{
+	border: 1px solid #212121;
+
+	background-color: #fff;
+}
+.panel_submit:hover{
+	border: 1px solid #212121;
+	background-color: #fff;	
+}
+/*提示框*/
+.tip-panel{
+	display: none;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(111, 111, 111, 0.8);	
+}
+.tip-panel p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 100px;
+	color: rgba(255, 0, 0, 0.9);
+	text-align: center;
+	font-size: 30px;
+	line-height: 100px;
+	border-radius: 10px;
+	background-color: rgb(99, 169, 97);
+	transform: translate(-200px, -50px);
+}
+

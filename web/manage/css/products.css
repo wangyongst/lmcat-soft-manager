@@ -1,0 +1,21 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #eee;
+}
+.new-product {
+  margin-bottom: 20px;
+}
+#product-detail{
+  float: left;
+}
+.edit-product{
+  width: 100%;
+}
+.edit-product i:hover{
+  cursor: pointer;
+}
+.edit-product h4{
+  display: inline-block;
+  width: 100px;
+}
