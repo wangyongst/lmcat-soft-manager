@@ -58,7 +58,7 @@ nutz:
 beetlsql:
     enabled : false #禁用beetlsql
 server:
-  port: 8022
+  port: 8021
   context-path: /
   compression:
     min-response-size: 512 #压缩文件最小大小(kb)

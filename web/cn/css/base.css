@@ -124,7 +124,7 @@ header ul li dl dd{
 	text-align: center;
 	background: rgba(10, 10, 10, 0.7);
 }   
-header ul li:last-child:hover dd{
+header ul li:hover dd{
 	display: block;
 }
 header ul li dl dd:hover a{

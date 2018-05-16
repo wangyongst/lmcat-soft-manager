@@ -122,7 +122,14 @@
 				<li><a href="../cn/serviceplan.html">免费计划</a></li>
 				<li><a href="../cn/labelplatform.html" class="blank">标注平台</a></li>
         		<li><a href="../cn/app.html">龙猫众包App</a></li>
-        		<li class="current"><a href="../cn/cooperation.html">数据合作</a></li>
+				<li class="current">
+					<dl>
+						<dt><a href="../cn/cooperation.html">数据合作</a></dt>
+						<dd>
+							<a href="../cn/cooperationlist.html">数据下载</a>
+						</dd>
+					</dl>
+				</li>
 				<li>
 					<dl>
 						<dt><a href="../cn/contact.html">关于我们</a></dt>
@@ -307,6 +314,7 @@
 </body>
 <script type="text/javascript" src = './js/sidebar.js'></script>
 <script type="text/javascript" src='./js/common.js'></script>
+<script type="text/javascript" src='./js/Contant.js'></script>
 <script src="./js/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	layui.use(['form', 'layer','upload', 'laydate'], function(){
@@ -314,13 +322,12 @@
   			form = layui.form,
   			layer = layui.layer,
   			laydate = layui.laydate;
-  			
   		laydate.render({
 	        elem: '.completeAt' //指定元素
 	    });
 	    var uploadInst = upload.render({
 	        elem: '#upLoadImg'
-	        , url: '/file_upload'
+	        , url: HOST.getHOST()+'/file_upload'
 	        , before: function (obj) {
 	            obj.preview(function (index, file, result) {
 	                $(".upLoadImgName").text(file.name)
@@ -337,7 +344,7 @@
 	
 	    var uploadInst1 = upload.render({
 	        elem: '#samp'
-	        , url: '/file_upload'
+	        , url: HOST.getHOST()+'/file_upload'
 	        , exts: 'zip|ZIP|RAR|rar|JPG|PNG|GIF|WORD|EXCEL|CVS'
 			, size: 3000000
 	        , before: function (obj) {
@@ -364,7 +371,7 @@
 	    form.on('submit(editSub)', function (data) {
 	        $.ajax({
 	            type: "POST",
-	            url: "/customer_cooperation/save_form",
+	            url: HOST.getHOST()+"/customer_cooperation/save_form",
 	            data: data.field,
 	            dataType: "json",
 	            async: false,
@@ -384,7 +391,6 @@
 	        });
 	         return false;
 	    })
-  		
  	})
   
 </script>
